@@ -3,18 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>test_my_site | Hexo</title>
+  <title>Linux下安装Tensorflow | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="YangKai's Blog" />
   
-  <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://yoursite.com/2017/08/08/test-my-site/index.html">
+  <meta name="description" content="##通过anaconda来安装 Anaconda 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的计算环境,类似 Virtualenv.在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。  安装a">
+<meta name="keywords" content="Tensorflow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux下安装Tensorflow">
+<meta property="og:url" content="http://yoursite.com/2017/08/08/Linux下安装Tensorflow/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-08-08T11:34:02.000Z">
+<meta property="og:description" content="##通过anaconda来安装 Anaconda 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的计算环境,类似 Virtualenv.在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。  安装a">
+<meta property="og:updated_time" content="2017-08-08T14:05:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test_my_site">
+<meta name="twitter:title" content="Linux下安装Tensorflow">
+<meta name="twitter:description" content="##通过anaconda来安装 Anaconda 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的计算环境,类似 Virtualenv.在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。  安装a">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -63,14 +67,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-test-my-site" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-Linux下安装Tensorflow" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      test_my_site
+      Linux下安装Tensorflow
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -92,13 +96,31 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            
+            <p>##通过anaconda来安装<br> <a href="https://www.continuum.io/why-anaconda" target="_blank" rel="external">Anaconda</a> 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的<a href="http://conda.pydata.org/docs/using/envs.html" target="_blank" rel="external">计算环境</a>,类似 Virtualenv.<br>在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。</p>
+<ul>
+<li>安装anaconda</li>
+<li>通过conda建立一个tensorflow计算环境</li>
+<li>激活环境，使用conda 安装 TensorFlow</li>
+<li>安装成功后,每次使用 TensorFlow 的时候需要激活 conda 环境<br>###安装 Anaconda :<br>参考 Anaconda 的下载页面的<a href="https://www.continuum.io/downloads" target="_blank" rel="external">指导</a><br>卸载anaconda，可以直接删除安装的目录。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -rf ~/anaconda3</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>##安装Tensorflow<br>建立一个 conda 计算环境名字叫tensorflow:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Python 3.6</div><div class="line">$ conda create -n tensorflow python=3.6</div></pre></td></tr></table></figure></p>
+<p>激活tensorflow环境,然后使用其中的 pip 安装 TensorFlow. 当使用easy_install使用–ignore-installed标记防止错误的产生。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#激活tensorflow环境</div><div class="line">$ source activate tensorflow</div><div class="line"># Ubuntu/Linux 64-bit, CPU only, Python 3.6:</div><div class="line">(tensorflow)$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp36-cp36m-linux_x86_64.whl</div><div class="line">#当你不用 TensorFlow 的时候,关闭环境:</div><div class="line">(tensorflow)$ source deactivate</div></pre></td></tr></table></figure></p>
+<p>推荐一个Tensoflow的学习网站 <a href="http://tflearn.org" target="_blank" rel="external">tensorflow learn</a></p>
+
       
     </div>
     <footer class="article-footer">
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Tensorflow/" class="color1">Tensorflow</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -108,19 +130,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/08/08/test2/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          自己的Blog
-        
-      </span>
-    </a>
   
-  
-    <a href="/2017/08/08/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">Hello World</span>
+    <a href="/2017/08/08/test2/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">自己的Blog</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
