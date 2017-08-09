@@ -3,10 +3,78 @@
   
     
     <entry>
+      <title><![CDATA[主要转录因子数据库]]></title>
+      <url>/2017/08/09/%E4%B8%BB%E8%A6%81%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+      <content type="html"><![CDATA[<h2 id="TRANSFAC-数据库"><a href="#TRANSFAC-数据库" class="headerlink" title="TRANSFAC 数据库"></a>TRANSFAC 数据库</h2><p>有两个版本，公开版和专业版</p>
+<h2 id="JASPAR数据库"><a href="#JASPAR数据库" class="headerlink" title="JASPAR数据库"></a>JASPAR数据库</h2><p>JASPAR是收集有关转录因子与DNA结合位点模体的最全面的公开的数据库，该数据库众所包含的数据都经过严格的筛选，有确切的实验依据</p>
+<h2 id="TFdb数据库"><a href="#TFdb数据库" class="headerlink" title="TFdb数据库"></a>TFdb数据库</h2><p>  TFdb是一个专业的关于小鼠转录因子的非冗余的数据库。该数据库由RIKEN基因组科学中心的基因组探测研究组实验室进行日常维护，TFdb包含了小鼠转录因子基因和与之关联的基因数据。TFdb的建库宗旨是提供小鼠全基因的非冗余的转录因子信息。</p>
+<h2 id="TRRD-数据库"><a href="#TRRD-数据库" class="headerlink" title="TRRD 数据库"></a>TRRD 数据库</h2><p>TRRD是转录调控区数据库，收集基因转录调控区域注释信息资源。该数据库由俄罗斯科学院西伯利亚的细胞学与遗传学研究所提供技术支持和日常维护。TRRD还有与内分泌调节、脂质代谢以及细胞凋亡相关的转录因子信息。<br>TRRD数据库主要由8个子数据库构成，分别是TRRDGENES（TRRD库基因的基本信息和调控单元信息）；TRRDLCR（调控区定位信息）；TRRDUNITS（调控区的启动子、增强子、沉默子等具体信息）；TRRDSTARTS（转录起始位点相关信息）；TRRSSITES（转录调控位点信息）；TRRDFACTORS（转录因子信息）；TRRDEXP（基因表达模式的信息）和TRRDBIB（数据库涉及的实验出版物信息）。</p>
+<h2 id="TRED数据库"><a href="#TRED数据库" class="headerlink" title="TRED数据库"></a>TRED数据库</h2><p>TRED为转录调控元件数据库，是基于研究基因调控网络的需要而建立的数据库，收集有实验证据的哺乳动物顺式作用元件和反式作用因子。TRED为公开数据库，由冷泉港实验室承担数据整理及维护工作。该数据库还提供了人类、小鼠、大鼠的全基因组序列，并提供相应的序列分析工具。</p>
+<h2 id="PAZAR数据库"><a href="#PAZAR数据库" class="headerlink" title="PAZAR数据库"></a>PAZAR数据库</h2><p>PAZAR数据库是一个公开的有关转录因子和其调控序列的数据库。</p>
+<h2 id="MAPPER数据库"><a href="#MAPPER数据库" class="headerlink" title="MAPPER数据库"></a>MAPPER数据库</h2><p>MAPPER数据库收集整理两个著名的转录因子数据库TRANSFAC和JASPAR中有关转录因子的资料，经过加工形成1134个转录因子结合位点的隐马可夫模型。，并通过这种模型去搜索人、小鼠及果蝇的基因组转录起始位点上游10KB序列。数据库需要用户使用自己的邮箱进行免费注册</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生物信息数据库 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 生物信息数据库 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[TCGA数据下载R包-RTCGAToolbox说明]]></title>
+      <url>/2017/08/09/TCGA%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BDR%E5%8C%85-RTCGAToolbox%E8%AF%B4%E6%98%8E/</url>
+      <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># 安装与加载R包</div><div class="line">source(&quot;https://bioconductor.org/biocLite.R&quot;)</div><div class="line">biocLite(&quot;RTCGAToolbox&quot;)</div><div class="line">library(RTCGAToolbox)</div><div class="line">getFirehoseDatasets() #查看可选的组织类型</div><div class="line"> [1] “ACC” “BLCA” “BRCA” “CESC” “CHOL” “COADREAD”</div><div class="line"> [7] “COAD” “DLBC” “ESCA” “FPPP” “GBMLGG” “GBM”</div><div class="line"> [13] “HNSC” “KICH” “KIPAN” “KIRC” “KIRP” “LAML”</div><div class="line"> [19] “LGG” “LIHC” “LUAD” “LUSC” “MESO” “OV”</div><div class="line"> [25] “PAAD” “PCPG” “PRAD” “READ” “SARC” “SKCM”</div><div class="line"> [31] “STAD” “STES” “TGCT” “THCA” “THYM” “UCEC”</div><div class="line"> [37] “UCS” “UVM”</div></pre></td></tr></table></figure>
+<p>查看数据更新时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getFirehoseRunningDates()</div></pre></td></tr></table></figure></p>
+<h2 id="数据下载"><a href="#数据下载" class="headerlink" title="数据下载"></a>数据下载</h2><p>设置数据存储路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stewed(&apos;/your/pwd&apos;)</div></pre></td></tr></table></figure></p>
+<p>选择要下载的数据及具体的数据类目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">BLCAdata &lt;- getFirehoseData(dataset = &quot;BLCA&quot;,runDate = &quot;20160128&quot;,gistic2_Date = &quot;20160128&quot;,RNAseq_Gene = TRUE,Clinic = TRUE,Mutation = TRUE)</div></pre></td></tr></table></figure></p>
+<p>获取数据中的临床数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">BLCAClinical = getData(BLCAdata,&quot;Clinical&quot;)</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> R语言 </category>
+            
+            <category> TCGA </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> TCGA </tag>
+            
+            <tag> R语言 </tag>
+            
+            <tag> 数据处理 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[图片集]]></title>
       <url>/2017/08/09/%E5%9B%BE%E7%89%87%E9%9B%86/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h4 id="雾中露营"><a href="#雾中露营" class="headerlink" title="雾中露营"></a>雾中露营</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/67338963.jpg" alt=""></p>
+<h4 id="DNA双螺旋"><a href="#DNA双螺旋" class="headerlink" title="DNA双螺旋"></a>DNA双螺旋</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/41707512.jpg" alt=""></p>
+<h4 id="海鸟"><a href="#海鸟" class="headerlink" title="海鸟"></a>海鸟</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/95295784.jpg" alt=""></p>
+<h4 id="CNGB"><a href="#CNGB" class="headerlink" title="CNGB"></a>CNGB</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/75633137.jpg" alt=""></p>
+]]></content>
       
+        
+        <tags>
+            
+            <tag> 图片 </tag>
+            
+        </tags>
         
     </entry>
     
