@@ -12,7 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
-
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -94,18 +103,17 @@
 
 
 
-<meta name="description" content="安装123456789101112# 安装与加载R包source(&amp;quot;https://bioconductor.org/biocLite.R&amp;quot;)biocLite(&amp;quot;RTCGAToolbox&amp;quot;)library(RTCGAToolbox)getFirehoseDatasets() #查看可选的组织类型 [1] “ACC” “BLCA” “BRCA” “CESC”">
 <meta name="keywords" content="TCGA,R语言,数据处理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TCGA数据下载R包-RTCGAToolbox说明">
 <meta property="og:url" content="http://yangkai.site/2017/08/09/TCGA数据下载R包-RTCGAToolbox说明/index.html">
 <meta property="og:site_name" content="YangKai&#39;s Blog">
-<meta property="og:description" content="安装123456789101112# 安装与加载R包source(&amp;quot;https://bioconductor.org/biocLite.R&amp;quot;)biocLite(&amp;quot;RTCGAToolbox&amp;quot;)library(RTCGAToolbox)getFirehoseDatasets() #查看可选的组织类型 [1] “ACC” “BLCA” “BRCA” “CESC”">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-09T08:13:14.000Z">
+<meta property="og:image" content="http://ouemmffgy.bkt.clouddn.com/17-8-9/41707512.jpg">
+<meta property="og:updated_time" content="2017-08-09T13:59:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TCGA数据下载R包-RTCGAToolbox说明">
-<meta name="twitter:description" content="安装123456789101112# 安装与加载R包source(&amp;quot;https://bioconductor.org/biocLite.R&amp;quot;)biocLite(&amp;quot;RTCGAToolbox&amp;quot;)library(RTCGAToolbox)getFirehoseDatasets() #查看可选的组织类型 [1] “ACC” “BLCA” “BRCA” “CESC”">
+<meta name="twitter:image" content="http://ouemmffgy.bkt.clouddn.com/17-8-9/41707512.jpg">
 
 
 
@@ -422,7 +430,8 @@
       
 
       
-        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># 安装与加载R包</div><div class="line">source(&quot;https://bioconductor.org/biocLite.R&quot;)</div><div class="line">biocLite(&quot;RTCGAToolbox&quot;)</div><div class="line">library(RTCGAToolbox)</div><div class="line">getFirehoseDatasets() #查看可选的组织类型</div><div class="line"> [1] “ACC” “BLCA” “BRCA” “CESC” “CHOL” “COADREAD”</div><div class="line"> [7] “COAD” “DLBC” “ESCA” “FPPP” “GBMLGG” “GBM”</div><div class="line"> [13] “HNSC” “KICH” “KIPAN” “KIRC” “KIRP” “LAML”</div><div class="line"> [19] “LGG” “LIHC” “LUAD” “LUSC” “MESO” “OV”</div><div class="line"> [25] “PAAD” “PCPG” “PRAD” “READ” “SARC” “SKCM”</div><div class="line"> [31] “STAD” “STES” “TGCT” “THCA” “THYM” “UCEC”</div><div class="line"> [37] “UCS” “UVM”</div></pre></td></tr></table></figure>
+        <p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/41707512.jpg" alt=""><br><a id="more"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#安装与加载R包</div><div class="line">source(&quot;https://bioconductor.org/biocLite.R&quot;)</div><div class="line">biocLite(&quot;RTCGAToolbox&quot;)</div><div class="line">library(RTCGAToolbox)</div><div class="line">getFirehoseDatasets() #查看可选的组织类型</div><div class="line"> [1] “ACC” “BLCA” “BRCA” “CESC” “CHOL” “COADREAD”</div><div class="line"> [7] “COAD” “DLBC” “ESCA” “FPPP” “GBMLGG” “GBM”</div><div class="line"> [13] “HNSC” “KICH” “KIPAN” “KIRC” “KIRP” “LAML”</div><div class="line"> [19] “LGG” “LIHC” “LUAD” “LUSC” “MESO” “OV”</div><div class="line"> [25] “PAAD” “PCPG” “PRAD” “READ” “SARC” “SKCM”</div><div class="line"> [31] “STAD” “STES” “TGCT” “THCA” “THYM” “UCEC”</div><div class="line"> [37] “UCS” “UVM”</div></pre></td></tr></table></figure>
 <p>查看数据更新时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getFirehoseRunningDates()</div></pre></td></tr></table></figure></p>
 <h2 id="数据下载"><a href="#数据下载" class="headerlink" title="数据下载"></a>数据下载</h2><p>设置数据存储路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stewed(&apos;/your/pwd&apos;)</div></pre></td></tr></table></figure></p>
 <p>选择要下载的数据及具体的数据类目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">BLCAdata &lt;- getFirehoseData(dataset = &quot;BLCA&quot;,runDate = &quot;20160128&quot;,gistic2_Date = &quot;20160128&quot;,RNAseq_Gene = TRUE,Clinic = TRUE,Mutation = TRUE)</div></pre></td></tr></table></figure></p>
@@ -473,11 +482,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/TCGA/" rel="tag"># TCGA</a>
+            <a href="/tags/TCGA/" rel="tag"><i class="fa fa-tag"></i>TCGA</a>
           
-            <a href="/tags/R语言/" rel="tag"># R语言</a>
+            <a href="/tags/R语言/" rel="tag"><i class="fa fa-tag"></i>R语言</a>
           
-            <a href="/tags/数据处理/" rel="tag"># 数据处理</a>
+            <a href="/tags/数据处理/" rel="tag"><i class="fa fa-tag"></i>数据处理</a>
           
         </div>
       
@@ -602,7 +611,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1193,5 +1202,19 @@
 
   
 
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -30px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/hijiki/hijiki.model.json")</script>
+  
 </body>
 </html>

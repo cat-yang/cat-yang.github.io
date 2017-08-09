@@ -50,9 +50,10 @@
     <link href="http://yangkai.site/2017/08/09/TCGA%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BDR%E5%8C%85-RTCGAToolbox%E8%AF%B4%E6%98%8E/"/>
     <id>http://yangkai.site/2017/08/09/TCGA数据下载R包-RTCGAToolbox说明/</id>
     <published>2017-08-09T08:03:13.000Z</published>
-    <updated>2017-08-09T08:13:14.000Z</updated>
+    <updated>2017-08-09T13:59:26.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># 安装与加载R包</div><div class="line">source(&quot;https://bioconductor.org/biocLite.R&quot;)</div><div class="line">biocLite(&quot;RTCGAToolbox&quot;)</div><div class="line">library(RTCGAToolbox)</div><div class="line">getFirehoseDatasets() #查看可选的组织类型</div><div class="line"> [1] “ACC” “BLCA” “BRCA” “CESC” “CHOL” “COADREAD”</div><div class="line"> [7] “COAD” “DLBC” “ESCA” “FPPP” “GBMLGG” “GBM”</div><div class="line"> [13] “HNSC” “KICH” “KIPAN” “KIRC” “KIRP” “LAML”</div><div class="line"> [19] “LGG” “LIHC” “LUAD” “LUSC” “MESO” “OV”</div><div class="line"> [25] “PAAD” “PCPG” “PRAD” “READ” “SARC” “SKCM”</div><div class="line"> [31] “STAD” “STES” “TGCT” “THCA” “THYM” “UCEC”</div><div class="line"> [37] “UCS” “UVM”</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/41707512.jpg" alt=""><br><a id="more"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#安装与加载R包</div><div class="line">source(&quot;https://bioconductor.org/biocLite.R&quot;)</div><div class="line">biocLite(&quot;RTCGAToolbox&quot;)</div><div class="line">library(RTCGAToolbox)</div><div class="line">getFirehoseDatasets() #查看可选的组织类型</div><div class="line"> [1] “ACC” “BLCA” “BRCA” “CESC” “CHOL” “COADREAD”</div><div class="line"> [7] “COAD” “DLBC” “ESCA” “FPPP” “GBMLGG” “GBM”</div><div class="line"> [13] “HNSC” “KICH” “KIPAN” “KIRC” “KIRP” “LAML”</div><div class="line"> [19] “LGG” “LIHC” “LUAD” “LUSC” “MESO” “OV”</div><div class="line"> [25] “PAAD” “PCPG” “PRAD” “READ” “SARC” “SKCM”</div><div class="line"> [31] “STAD” “STES” “TGCT” “THCA” “THYM” “UCEC”</div><div class="line"> [37] “UCS” “UVM”</div></pre></td></tr></table></figure>
 <p>查看数据更新时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getFirehoseRunningDates()</div></pre></td></tr></table></figure></p>
 <h2 id="数据下载"><a href="#数据下载" class="headerlink" title="数据下载"></a>数据下载</h2><p>设置数据存储路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stewed(&apos;/your/pwd&apos;)</div></pre></td></tr></table></figure></p>
 <p>选择要下载的数据及具体的数据类目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">BLCAdata &lt;- getFirehoseData(dataset = &quot;BLCA&quot;,runDate = &quot;20160128&quot;,gistic2_Date = &quot;20160128&quot;,RNAseq_Gene = TRUE,Clinic = TRUE,Mutation = TRUE)</div></pre></td></tr></table></figure></p>
@@ -61,7 +62,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
+      &lt;p&gt;&lt;img src=&quot;http://ouemmffgy.bkt.clouddn.com/17-8-9/41707512.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -83,9 +84,9 @@
     <link href="http://yangkai.site/2017/08/09/%E5%9B%BE%E7%89%87%E9%9B%86/"/>
     <id>http://yangkai.site/2017/08/09/图片集/</id>
     <published>2017-08-09T03:44:14.000Z</published>
-    <updated>2017-08-09T08:28:26.000Z</updated>
+    <updated>2017-08-09T13:54:18.000Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="雾中露营"><a href="#雾中露营" class="headerlink" title="雾中露营"></a>雾中露营</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/67338963.jpg" alt=""></p>
+    <content type="html"><![CDATA[<h4 id="雾中露营"><a href="#雾中露营" class="headerlink" title="雾中露营"></a>雾中露营</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/67338963.jpg" alt=""><br><a id="more"></a></p>
 <h4 id="DNA双螺旋"><a href="#DNA双螺旋" class="headerlink" title="DNA双螺旋"></a>DNA双螺旋</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/41707512.jpg" alt=""></p>
 <h4 id="海鸟"><a href="#海鸟" class="headerlink" title="海鸟"></a>海鸟</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/95295784.jpg" alt=""></p>
 <h4 id="CNGB"><a href="#CNGB" class="headerlink" title="CNGB"></a>CNGB</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/75633137.jpg" alt=""></p>
@@ -93,7 +94,7 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;雾中露营&quot;&gt;&lt;a href=&quot;#雾中露营&quot; class=&quot;headerlink&quot; title=&quot;雾中露营&quot;&gt;&lt;/a&gt;雾中露营&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://ouemmffgy.bkt.clouddn.com/17-8-9/67338963.jpg
+      &lt;h4 id=&quot;雾中露营&quot;&gt;&lt;a href=&quot;#雾中露营&quot; class=&quot;headerlink&quot; title=&quot;雾中露营&quot;&gt;&lt;/a&gt;雾中露营&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://ouemmffgy.bkt.clouddn.com/17-8-9/67338963.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -134,44 +135,6 @@
   </entry>
   
   <entry>
-    <title>自己的Blog</title>
-    <link href="http://yangkai.site/2017/08/08/test2/"/>
-    <id>http://yangkai.site/2017/08/08/test2/</id>
-    <published>2017-08-08T12:14:49.000Z</published>
-    <updated>2017-08-08T14:06:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://i1.bvimg.com/603952/902a4c06b63187df.jpg" alt="Helloworld"></p>
-<h2 id="起意"><a href="#起意" class="headerlink" title="起意"></a>起意</h2><p>很就之前就想搭建一个自己的Blog，但是由于种种原因加上自己的懒惰，计划一直搁浅了很久。前几天偶然在知乎上看到一个不错的<a href="https://zhuanlan.zhihu.com/p/26625249?utm_source=wechat_session&amp;utm_medium=social" target="_blank" rel="external">教程</a>，因此，就照着教程搭建了这个Blog，在此，也非常感谢教程的作者🙏</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ul>
-<li>域名注册</li>
-<li>GitHub创建个人仓库</li>
-<li>安装Git</li>
-<li>安装Node.js</li>
-<li>安装Hexo</li>
-<li>推送网站</li>
-<li>绑定域名</li>
-<li>更换主题</li>
-<li>初识MarkDown语法</li>
-<li>发布文章</li>
-<li>寻找图床</li>
-<li>个性化设置</li>
-</ul>
-<p>其中我在GitHub创建个人仓库这里没仔细看教程，建库名称有误，要警醒自己以后少犯这样的低级错误。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://i1.bvimg.com/603952/902a4c06b63187df.jpg&quot; alt=&quot;Helloworld&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;起意&quot;&gt;&lt;a href=&quot;#起意&quot; class=&quot;headerlink&quot; title=&quot;起意&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="http://yangkai.site/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
     <title>test_my_site</title>
     <link href="http://yangkai.site/2017/08/08/test-my-site/"/>
     <id>http://yangkai.site/2017/08/08/test-my-site/</id>
@@ -190,9 +153,9 @@
     <link href="http://yangkai.site/2017/08/08/hello-world/"/>
     <id>http://yangkai.site/2017/08/08/hello-world/</id>
     <published>2017-08-08T11:30:46.000Z</published>
-    <updated>2017-08-08T11:30:46.000Z</updated>
+    <updated>2017-08-09T13:56:41.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><img src="http://i1.bvimg.com/603952/902a4c06b63187df.jpg" alt="Helloworld"><br><a id="more"></a></p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -205,7 +168,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;&lt;img src=&quot;http://i1.bvimg.com/603952/902a4c06b63187df.jpg&quot; alt=&quot;Helloworld&quot;&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     

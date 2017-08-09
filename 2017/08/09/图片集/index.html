@@ -12,7 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
-
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -94,22 +103,22 @@
 
 
 
-<meta name="description" content="雾中露营 DNA双螺旋 海鸟 CNGB">
+<meta name="description" content="雾中露营">
 <meta name="keywords" content="图片">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图片集">
 <meta property="og:url" content="http://yangkai.site/2017/08/09/图片集/index.html">
 <meta property="og:site_name" content="YangKai&#39;s Blog">
-<meta property="og:description" content="雾中露营 DNA双螺旋 海鸟 CNGB">
+<meta property="og:description" content="雾中露营">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ouemmffgy.bkt.clouddn.com/17-8-9/67338963.jpg">
 <meta property="og:image" content="http://ouemmffgy.bkt.clouddn.com/17-8-9/41707512.jpg">
 <meta property="og:image" content="http://ouemmffgy.bkt.clouddn.com/17-8-9/95295784.jpg">
 <meta property="og:image" content="http://ouemmffgy.bkt.clouddn.com/17-8-9/75633137.jpg">
-<meta property="og:updated_time" content="2017-08-09T08:28:26.000Z">
+<meta property="og:updated_time" content="2017-08-09T13:54:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图片集">
-<meta name="twitter:description" content="雾中露营 DNA双螺旋 海鸟 CNGB">
+<meta name="twitter:description" content="雾中露营">
 <meta name="twitter:image" content="http://ouemmffgy.bkt.clouddn.com/17-8-9/67338963.jpg">
 
 
@@ -394,7 +403,7 @@
       
 
       
-        <h4 id="雾中露营"><a href="#雾中露营" class="headerlink" title="雾中露营"></a>雾中露营</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/67338963.jpg" alt=""></p>
+        <h4 id="雾中露营"><a href="#雾中露营" class="headerlink" title="雾中露营"></a>雾中露营</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/67338963.jpg" alt=""><br><a id="more"></a></p>
 <h4 id="DNA双螺旋"><a href="#DNA双螺旋" class="headerlink" title="DNA双螺旋"></a>DNA双螺旋</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/41707512.jpg" alt=""></p>
 <h4 id="海鸟"><a href="#海鸟" class="headerlink" title="海鸟"></a>海鸟</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/95295784.jpg" alt=""></p>
 <h4 id="CNGB"><a href="#CNGB" class="headerlink" title="CNGB"></a>CNGB</h4><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-9/75633137.jpg" alt=""></p>
@@ -444,7 +453,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/图片/" rel="tag"># 图片</a>
+            <a href="/tags/图片/" rel="tag"><i class="fa fa-tag"></i>图片</a>
           
         </div>
       
@@ -569,7 +578,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1160,5 +1169,19 @@
 
   
 
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -30px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/hijiki/hijiki.model.json")</script>
+  
 </body>
 </html>

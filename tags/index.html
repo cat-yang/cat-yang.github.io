@@ -12,7 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
-
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -326,7 +335,7 @@
                 目前共计 7 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/R语言/" style="font-size: 12px; color: #ccc">R语言</a> <a href="/tags/TCGA/" style="font-size: 12px; color: #ccc">TCGA</a> <a href="/tags/Tensorflow/" style="font-size: 12px; color: #ccc">Tensorflow</a> <a href="/tags/图片/" style="font-size: 12px; color: #ccc">图片</a> <a href="/tags/数据处理/" style="font-size: 12px; color: #ccc">数据处理</a> <a href="/tags/生物信息数据库/" style="font-size: 12px; color: #ccc">生物信息数据库</a> <a href="/tags/随笔/" style="font-size: 12px; color: #ccc">随笔</a>
+              <a href="/tags/R语言/" style="font-size: 12px; color: #ccc">R语言</a> <a href="/tags/TCGA/" style="font-size: 12px; color: #ccc">TCGA</a> <a href="/tags/Tensorflow/" style="font-size: 12px; color: #ccc">Tensorflow</a> <a href="/tags/图片/" style="font-size: 12px; color: #ccc">图片</a> <a href="/tags/数据处理/" style="font-size: 12px; color: #ccc">数据处理</a> <a href="/tags/生物信息数据库/" style="font-size: 12px; color: #ccc">生物信息数据库</a>
             </div>
           </div>
         
@@ -386,7 +395,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -961,5 +970,19 @@
 
   
 
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -30px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/hijiki/hijiki.model.json")</script>
+  
 </body>
 </html>
