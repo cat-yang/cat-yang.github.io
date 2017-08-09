@@ -34,9 +34,9 @@
     <link href="http://yangkai.site/2017/08/08/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Tensorflow/"/>
     <id>http://yangkai.site/2017/08/08/Linux下安装Tensorflow/</id>
     <published>2017-08-08T14:04:35.000Z</published>
-    <updated>2017-08-09T02:37:02.000Z</updated>
+    <updated>2017-08-09T04:52:39.000Z</updated>
     
-    <content type="html"><![CDATA[<p>##通过anaconda来安装<br> <a href="https://www.continuum.io/why-anaconda" target="_blank" rel="external">Anaconda</a> 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的<a href="http://conda.pydata.org/docs/using/envs.html" target="_blank" rel="external">计算环境</a>,类似 Virtualenv.<br>在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。</p>
+    <content type="html"><![CDATA[<h2 id="通过anaconda来安装"><a href="#通过anaconda来安装" class="headerlink" title="通过anaconda来安装"></a>通过anaconda来安装</h2><p> <a href="https://www.continuum.io/why-anaconda" target="_blank" rel="external">Anaconda</a> 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的<a href="http://conda.pydata.org/docs/using/envs.html" target="_blank" rel="external">计算环境</a>,类似 Virtualenv.<br>在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。</p>
 <ul>
 <li>安装anaconda</li>
 <li>通过conda建立一个tensorflow计算环境</li>
@@ -44,14 +44,14 @@
 <li>安装成功后,每次使用 TensorFlow 的时候需要激活 conda 环境<br>###安装 Anaconda :<br>参考 Anaconda 的下载页面的<a href="https://www.continuum.io/downloads" target="_blank" rel="external">指导</a><br>卸载anaconda，可以直接删除安装的目录。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -rf ~/anaconda3</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>##安装Tensorflow<br>建立一个 conda 计算环境名字叫tensorflow:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Python 3.6</div><div class="line">$ conda create -n tensorflow python=3.6</div></pre></td></tr></table></figure></p>
+<h2 id="安装Tensorflow"><a href="#安装Tensorflow" class="headerlink" title="安装Tensorflow"></a>安装Tensorflow</h2><p>建立一个 conda 计算环境名字叫tensorflow:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Python 3.6</div><div class="line">$ conda create -n tensorflow python=3.6</div></pre></td></tr></table></figure></p>
 <p>激活tensorflow环境,然后使用其中的 pip 安装 TensorFlow. 当使用easy_install使用–ignore-installed标记防止错误的产生。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#激活tensorflow环境</div><div class="line">$ source activate tensorflow</div><div class="line"># Ubuntu/Linux 64-bit, CPU only, Python 3.6:</div><div class="line">(tensorflow)$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp36-cp36m-linux_x86_64.whl</div><div class="line">#当你不用 TensorFlow 的时候,关闭环境:</div><div class="line">(tensorflow)$ source deactivate</div></pre></td></tr></table></figure></p>
 <p>推荐一个Tensoflow的学习网站 <a href="http://tflearn.org" target="_blank" rel="external">tensorflow learn</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;##通过anaconda来安装&lt;br&gt; &lt;a href=&quot;https://www.continuum.io/why-anaconda&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Anaconda&lt;/a&gt; 是一个集成许多第三方科学计算库的 Python 科
+      &lt;h2 id=&quot;通过anaconda来安装&quot;&gt;&lt;a href=&quot;#通过anaconda来安装&quot; class=&quot;headerlink&quot; title=&quot;通过anaconda来安装&quot;&gt;&lt;/a&gt;通过anaconda来安装&lt;/h2&gt;&lt;p&gt; &lt;a href=&quot;https://www.cont
     
     </summary>
     
