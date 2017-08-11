@@ -5,15 +5,78 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangkai.site/"/>
-  <updated>2017-08-09T08:50:23.000Z</updated>
+  <updated>2017-08-11T00:54:48.000Z</updated>
   <id>http://yangkai.site/</id>
   
   <author>
-    <name>Yang Kai</name>
+    <name>YangKai</name>
     <email>yangkaigogo@gmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EGA数据下载</title>
+    <link href="http://yangkai.site/2017/08/10/EGA%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://yangkai.site/2017/08/10/EGA数据下载/</id>
+    <published>2017-08-10T12:31:35.000Z</published>
+    <updated>2017-08-11T00:54:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>The European Genome-phenome Archive (EGA) is a service for permanent archiving and sharing of all types of personally identifiable genetic and phenotypic data resulting from biomedical research projects.<br><img src="/2017/08/10/EGA数据下载/" alt=""></p>
+<h2 id="使用客户端下载数据"><a href="#使用客户端下载数据" class="headerlink" title="使用客户端下载数据"></a>使用客户端下载数据</h2><h3 id="下载客户端"><a href="#下载客户端" class="headerlink" title="下载客户端"></a>下载客户端</h3><p><a href="https://www.ebi.ac.uk/ega/sites/ebi.ac.uk.ega/files/documents/EgaDemoClient_2.2.2.zip" target="_blank" rel="external">点击下载</a></p>
+<p>下载的压缩包包含一下四个文件</p>
+<ul>
+<li>EgaDemoClient.jar</li>
+<li>ReadmeQuick start guides (2)</li>
+<li>2 Quick start guides</li>
+</ul>
+<h3 id="客户端调试"><a href="#客户端调试" class="headerlink" title="客户端调试"></a>客户端调试</h3><p>这个工具是用java开发的，要求java版本在1.7+，同时你的下载设备要能上网。TCP的80和443端口要打开。客户端下载数据的服务器所在的ip地址为：193.62.192.14。测试客户端是否能正常运行（假设用户名和密码分别为：user name = demo@test.org, password = 123pass）：<br><figure class="highlight java"><figcaption><span>-jar EgaDemoClient.jar -debug demo@test.org 123pass```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">### 网络优化</div><div class="line">为了最大化下载速度，第一次运行客户端时登录时，先运行以下命令(假设用户名和密码分别为：user name = demo<span class="meta">@test</span>.org, password = <span class="number">123</span>pass)：</div></pre></td></tr></table></figure></p>
+<p>Your computer &gt; java -jar EgaDemoClient.jar<br>Welcome to the EGA Secure Data Shell Demo.<br>Type ‘help’ for help, and ‘exit’ to quit.<br>Ega Demo Download Client  Version: 2.2.2<br>EGA &gt;Login username<br>Password:<br>Login Success!<br>EGA &gt; testbandwidth 7<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">### 登陆</div><div class="line">假设用户名和密码分别为：user name = demo@test.org, password = 123pass.操作时输入自己的用户名和密码</div></pre></td></tr></table></figure></p>
+<p>EGA &gt; login demo@test.org<br>Password: 123pass<br>Login Success!<br>EGA &gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 查看该用户可以访问的数据</div></pre></td></tr></table></figure></p>
+<p>EGA &gt; datasets<br>  EGAD00001001939<br>  EGAD00001001940<br>  EGAD00001001941<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 查看对应数据集下有哪些文件</div></pre></td></tr></table></figure></p>
+<p>EGA &gt; files dataset EGAD00001001941<br>Files in EGAD00001001941:<br>  /EGAZ00001222800/combinedVariant.vcf.cip  183114484657  EGAF00001085014  available<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 查看文件大小</div></pre></td></tr></table></figure></p>
+<p>EGA &gt; size dataset EGAD00001001941<br>Size of dataset EGAD00001001941: 170.5 GB<br>```</p>
+<h3 id="下载数据"><a href="#下载数据" class="headerlink" title="下载数据"></a>下载数据</h3><ul>
+<li>选在下载的类型，整个数据集或单个文件</li>
+<li>加入你要下载的内容</li>
+<li>设置一个加密密钥</li>
+<li>设置一个下载标签</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;The European Genome-phenome Archive (EGA) is a service for permanent archiving and sharing of all types of personally identifiable geneti
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>生物信息相关数据库记录</title>
+    <link href="http://yangkai.site/2017/08/10/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yangkai.site/2017/08/10/生物信息相关数据库记录/</id>
+    <published>2017-08-10T07:19:34.000Z</published>
+    <updated>2017-08-10T12:32:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="蛋白相互作用数据库-STRING"><a href="#蛋白相互作用数据库-STRING" class="headerlink" title="蛋白相互作用数据库-STRING"></a>蛋白相互作用数据库-STRING</h2><p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-10/4305273.jpg" alt=""><br>string数据库是PPI领域里面最完备已经最受欢迎的数据库了。如果直接在谷歌里面搜索PPI，映入眼帘就是string的官网，它们的主页现在是html5啦，比较精美： <a href="http://string-db.org/" target="_blank" rel="external">http://string-db.org/</a></p>
+<h2 id="EGA数据库"><a href="#EGA数据库" class="headerlink" title="EGA数据库"></a>EGA数据库</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;蛋白相互作用数据库-STRING&quot;&gt;&lt;a href=&quot;#蛋白相互作用数据库-STRING&quot; class=&quot;headerlink&quot; title=&quot;蛋白相互作用数据库-STRING&quot;&gt;&lt;/a&gt;蛋白相互作用数据库-STRING&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http
+    
+    </summary>
+    
+      <category term="生物信息" scheme="http://yangkai.site/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/"/>
+    
+    
+      <category term="数据库" scheme="http://yangkai.site/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="生物信息" scheme="http://yangkai.site/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>主要转录因子数据库</title>
