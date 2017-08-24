@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangkai.site/"/>
-  <updated>2017-08-21T11:14:30.000Z</updated>
+  <updated>2017-08-24T10:19:08.000Z</updated>
   <id>http://yangkai.site/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux下使用wget下载数据</title>
+    <link href="http://yangkai.site/2017/08/24/linux%E4%B8%8B%E4%BD%BF%E7%94%A8wget%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE/"/>
+    <id>http://yangkai.site/2017/08/24/linux下使用wget下载数据/</id>
+    <published>2017-08-24T08:26:51.000Z</published>
+    <updated>2017-08-24T10:19:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2017/08/24/linux下使用wget下载数据/" alt=""></p>
+<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><p>wget [参数] [URL地址]</p>
+<h2 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h2><h3 id="启动参数"><a href="#启动参数" class="headerlink" title="启动参数"></a>启动参数</h3><p>-V, –version 显示wget的版本后退出<br><br>-h, –help 打印语法帮助<br><br>-b, –background 启动后转入后台执行<br><br>-e, –execute=COMMAND 执行`.wgetrc’格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc<br></p>
+<h3 id="记录和输入文件参数"><a href="#记录和输入文件参数" class="headerlink" title="记录和输入文件参数"></a>记录和输入文件参数</h3><p>-o, –output-file=FILE 把记录写到FILE文件中<br><br>-a, –append-output=FILE 把记录追加到FILE文件中<br><br>-d, –debug 打印调试输出<br><br>-q, –quiet 安静模式(没有输出)<br><br>-v, –verbose 冗长模式(这是缺省设置)<br><br>-nv, –non-verbose 关掉冗长模式，但不是安静模式<br><br>-i, –input-file=FILE 下载在FILE文件中出现的URLs<br><br>-F, –force-html 把输入文件当作HTML格式文件对待<br><br>-B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀<br><br>–sslcertfile=FILE 可选客户端证书<br><br>–sslcertkey=KEYFILE 可选客户端证书的KEYFILE<br><br>–egd-file=FILE 指定EGD socket的文件名<br></p>
+<h3 id="下载参数"><a href="#下载参数" class="headerlink" title="下载参数"></a>下载参数</h3><p>–bind-address=ADDRESS 指定本地使用地址(主机名或IP，当本地有多个IP或名字时使用)<br><br>-t, –tries=NUMBER 设定最大尝试链接次数(0 表示无限制).<br><br>-O –output-document=FILE 把文档写到FILE文件中<br><br>-nc, –no-clobber 不要覆盖存在的文件或使用.#前缀<br><br>-c, –continue 接着下载没下载完的文件<br><br>–progress=TYPE 设定进程条标记<br><br>-N, –timestamping 不要重新下载文件除非比本地文件新<br><br>-S, –server-response 打印服务器的回应<br><br>–spider 不下载任何东西<br><br>-T, –timeout=SECONDS 设定响应超时的秒数<br><br>-w, –wait=SECONDS 两次尝试之间间隔SECONDS秒<br><br>–waitretry=SECONDS 在重新链接之间等待1…SECONDS秒<br><br>–random-wait 在下载之间等待0…2*WAIT秒<br><br>-Y, –proxy=on/off 打开或关闭代理<br><br>-Q, –quota=NUMBER 设置下载的容量限制<br><br>–limit-rate=RATE 限定下载输率<br></p>
+<h3 id="目录参数"><a href="#目录参数" class="headerlink" title="目录参数"></a>目录参数</h3><p>-nd –no-directories 不创建目录<br><br>-x, –force-directories 强制创建目录<br><br>-nH, –no-host-directories 不创建主机目录<br><br>-P, –directory-prefix=PREFIX 将文件保存到目录 PREFIX/…<br><br>–cut-dirs=NUMBER 忽略 NUMBER层远程目录<br></p>
+<h3 id="HTTP-选项参数"><a href="#HTTP-选项参数" class="headerlink" title="HTTP 选项参数"></a>HTTP 选项参数</h3><p>–http-user=USER 设定HTTP用户名为 USER.<br><br>–http-passwd=PASS 设定http密码为 PASS <br><br>-C, –cache=on/off 允许/不允许服务器端的数据缓存 (一般情况下允许)<br><br>-E, –html-extension 将所有text/html文档以.html扩展名保存 <br><br>–ignore-length 忽略 `Content-Length’头域<br></p>
+<p>–header=STRING 在headers中插入字符串 STRING<br><br>–proxy-user=USER 设定代理的用户名为 USER<br><br>–proxy-passwd=PASS 设定代理的密码为 PASS<br><br>–referer=URL 在HTTP请求中包含 `Referer: URL’头<br><br>-s, –save-headers 保存HTTP头到文件<br><br>-U, –user-agent=AGENT 设定代理的名称为 AGENT而不是 Wget/VERSION<br><br>–no-http-keep-alive 关闭 HTTP活动链接 (永远链接)<br><br>–cookies=off 不使用 cookies<br><br>–load-cookies=FILE 在开始会话前从文件 FILE中加载cookie<br><br>–save-cookies=FILE 在会话结束后将 cookies保存到 FILE文件中<br></p>
+<h3 id="FTP-选项参数"><a href="#FTP-选项参数" class="headerlink" title="FTP 选项参数"></a>FTP 选项参数</h3><p>-nr, –dont-remove-listing 不移走 `.listing’文件<br><br>-g, –glob=on/off 打开或关闭文件名的 globbing机制<br><br>–passive-ftp 使用被动传输模式 (缺省值).<br><br>–active-ftp 使用主动传输模式<br><br>–retr-symlinks 在递归的时候，将链接指向文件(而不是目录)<br></p>
+<h3 id="递归下载参数"><a href="#递归下载参数" class="headerlink" title="递归下载参数"></a>递归下载参数</h3><p>-r, –recursive 递归下载－－慎用!<br><br>-l, –level=NUMBER 最大递归深度 (inf 或 0 代表无穷)<br><br>–delete-after 在现在完毕后局部删除文件<br><br>-k, –convert-links 转换非相对链接为相对链接<br><br>-K, –backup-converted 在转换文件X之前，将之备份为 X.orig<br><br>-m, –mirror 等价于 -r -N -l inf -nr<br><br>-p, –page-requisites 下载显示HTML文件的所有图片<br></p>
+<h3 id="递归下载中的包含和不包含-accept-reject"><a href="#递归下载中的包含和不包含-accept-reject" class="headerlink" title="递归下载中的包含和不包含(accept/reject)"></a>递归下载中的包含和不包含(accept/reject)</h3><p>-A, –accept=LIST 分号分隔的被接受扩展名的列表<br><br>-R, –reject=LIST 分号分隔的不被接受的扩展名的列表<br><br>-D, –domains=LIST 分号分隔的被接受域的列表<br><br>–exclude-domains=LIST 分号分隔的不被接受的域的列表<br><br>–follow-ftp 跟踪HTML文档中的FTP链接<br><br>–follow-tags=LIST 分号分隔的被跟踪的HTML标签的列表<br><br>-G, –ignore-tags=LIST 分号分隔的被忽略的HTML标签的列表<br><br>-H, –span-hosts 当递归时转到外部主机<br><br>-L, –relative 仅仅跟踪相对链接<br><br>-I, –include-directories=LIST 允许目录的列表<br><br>-X, –exclude-directories=LIST 不被包含目录的列表<br><br>-np, –no-parent 不要追溯到父目录<br><br>wget -S –spider url 不下载只显示过程<br></p>
+<h2 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h2><h3 id="实例1：使用wget下载单个文件"><a href="#实例1：使用wget下载单个文件" class="headerlink" title="实例1：使用wget下载单个文件"></a>实例1：使用wget下载单个文件</h3><p>命令：<br><br>wget <a href="http://www.minjieren.com/wordpress-3.1-zh_CN.zip" target="_blank" rel="external">http://www.minjieren.com/wordpress-3.1-zh_CN.zip</a><br><br>说明：<br><br>以下的例子是从网络下载一个文件并保存在当前目录，在下载的过程中会显示进度条，包含（下载完成百分比，已经下载的字节，当前下载速度，剩余下载时间）。<br></p>
+<h3 id="实例2：使用wget-O下载并以不同的文件名保存"><a href="#实例2：使用wget-O下载并以不同的文件名保存" class="headerlink" title="实例2：使用wget -O下载并以不同的文件名保存"></a>实例2：使用wget -O下载并以不同的文件名保存</h3><p>命令：<br><br>    wget -O wordpress.zip <a href="http://www.minjieren.com/download.aspx?id=1080" target="_blank" rel="external">http://www.minjieren.com/download.aspx?id=1080</a><br><br>说明：<br><br>wget默认会以最后一个符合”/”的后面的字符来命令，对于动态链接的下载通常文件名会不正确。<br><br>错误：下面的例子会下载一个文件并以名称download.aspx?id=1080保存<br><br>wget <a href="http://www.minjieren.com/download?id=1" target="_blank" rel="external">http://www.minjieren.com/download?id=1</a><br><br>即使下载的文件是zip格式，它仍然以download.php?id=1080命令。<br><br>正确：为了解决这个问题，我们可以使用参数-O来指定一个文件名：<br><br>wget -O wordpress.zip <a href="http://www.minjieren.com/download.aspx?id=1080" target="_blank" rel="external">http://www.minjieren.com/download.aspx?id=1080</a><br></p>
+<h3 id="实例3：使用wget-–limit-rate限速下载"><a href="#实例3：使用wget-–limit-rate限速下载" class="headerlink" title="实例3：使用wget –limit -rate限速下载"></a>实例3：使用wget –limit -rate限速下载</h3><p>命令：<br><br>wget –limit-rate=300k <a href="http://www.minjieren.com/wordpress-3.1-zh_CN.zip" target="_blank" rel="external">http://www.minjieren.com/wordpress-3.1-zh_CN.zip</a><br><br>说明：<br><br>当你执行wget的时候，它默认会占用全部可能的宽带下载。但是当你准备下载一个大文件，而你还需要下载其它文件时就有必要限速了。<br></p>
+<h3 id="实例4：使用wget-c断点续传"><a href="#实例4：使用wget-c断点续传" class="headerlink" title="实例4：使用wget -c断点续传"></a>实例4：使用wget -c断点续传</h3><p>命令：<br><br>wget -c <a href="http://www.minjieren.com/wordpress-3.1-zh_CN.zip" target="_blank" rel="external">http://www.minjieren.com/wordpress-3.1-zh_CN.zip</a><br><br>说明：<br><br>使用wget -c重新启动下载中断的文件，对于我们下载大文件时突然由于网络等原因中断非常有帮助，我们可以继续接着下载而不是重新下载一个文件。需要继续中断的下载时可以使用-c参数。<br></p>
+<h3 id="实例5：使用wget-b后台下载"><a href="#实例5：使用wget-b后台下载" class="headerlink" title="实例5：使用wget -b后台下载"></a>实例5：使用wget -b后台下载</h3><p>命令：<br><br>wget -b <a href="http://www.minjieren.com/wordpress-3.1-zh_CN.zip" target="_blank" rel="external">http://www.minjieren.com/wordpress-3.1-zh_CN.zip</a><br><br>说明：<br><br>对于下载非常大的文件的时候，我们可以使用参数-b进行后台下载。<br><br>wget -b <a href="http://www.minjieren.com/wordpress-3.1-zh_CN.zip" target="_blank" rel="external">http://www.minjieren.com/wordpress-3.1-zh_CN.zip</a><br><br>Continuing in background, pid 1840.<br><br>Output will be written to `wget-log’.<br><br>你可以使用以下命令来察看下载进度：<br><br>tail -f wget-log<br></p>
+<h3 id="实例6：伪装代理名称下载"><a href="#实例6：伪装代理名称下载" class="headerlink" title="实例6：伪装代理名称下载"></a>实例6：伪装代理名称下载</h3><p>命令：<br><br>wget –user-agent=”Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.16<br> (KHTML, like Gecko) Chrome/10.0.648.204 Safari/534.16”<br> <a href="http://www.minjieren.com/wordpress-3.1-zh_CN.zip" target="_blank" rel="external">http://www.minjieren.com/wordpress-3.1-zh_CN.zip</a><br><br>说明：<br><br>有些网站能通过根据判断代理名称不是浏览器而拒绝你的下载请求。不过你可以通过–user-agent参数伪装。<br></p>
+<h3 id="实例7：使用wget-–tries增加重试次数"><a href="#实例7：使用wget-–tries增加重试次数" class="headerlink" title="实例7：使用wget –tries增加重试次数"></a>实例7：使用wget –tries增加重试次数</h3><p>命令：<br><br>wget –tries=40 URL<br><br>说明：<br><br>如果网络有问题或下载一个大文件也有可能失败。wget默认重试20次连接下载文件。如果需要，你可以使用–tries增加重试次数。<br></p>
+<h3 id="实例8：使用wget-i下载多个文件"><a href="#实例8：使用wget-i下载多个文件" class="headerlink" title="实例8：使用wget -i下载多个文件"></a>实例8：使用wget -i下载多个文件</h3><p>命令：<br><br>wget -i filelist.txt<br><br>说明：<br><br>首先，保存一份下载链接文件<br><br>cat &gt; filelist.txt<br><br>url1<br><br>url2<br><br>url3<br><br>url4<br><br>接着使用这个文件和参数-i下载<br></p>
+<h3 id="实例9：使用wget-–mirror镜像网站"><a href="#实例9：使用wget-–mirror镜像网站" class="headerlink" title="实例9：使用wget –mirror镜像网站"></a>实例9：使用wget –mirror镜像网站</h3><p>命令：<br><br>wget –mirror -p –convert-links -P ./LOCAL URL<br><br>说明：<br><br>下载整个网站到本地。<br><br>–miror:开户镜像下载<br><br>-p:下载所有为了html页面显示正常的文件<br><br>–convert-links:下载后，转换成本地的链接<br><br>-P ./LOCAL：保存所有文件和目录到本地指定目录<br></p>
+<h3 id="实例10：使用wget-–reject过滤指定格式下载"><a href="#实例10：使用wget-–reject过滤指定格式下载" class="headerlink" title="实例10：使用wget –reject过滤指定格式下载"></a>实例10：使用wget –reject过滤指定格式下载</h3><p>命令：<br><br>wget –reject=gif ur<br><br>说明：<br><br>下载一个网站，但你不希望下载图片，可以使用以下命令。<br></p>
+<h3 id="实例11：使用wget-o把下载信息存入日志文件"><a href="#实例11：使用wget-o把下载信息存入日志文件" class="headerlink" title="实例11：使用wget -o把下载信息存入日志文件"></a>实例11：使用wget -o把下载信息存入日志文件</h3><p>命令：<br><br>wget -o download.log URL<br><br>说明：<br><br>不希望下载信息直接显示在终端而是在一个日志文件，可以使用<br></p>
+<h3 id="实例12：使用wget-Q限制总下载文件大小"><a href="#实例12：使用wget-Q限制总下载文件大小" class="headerlink" title="实例12：使用wget -Q限制总下载文件大小"></a>实例12：使用wget -Q限制总下载文件大小</h3><p>命令：<br><br>wget -Q5m -i filelist.txt<br><br>说明：<br><br>当你想要下载的文件超过5M而退出下载，你可以使用。注意：这个参数对单个文件下载不起作用，只能递归下载时才有效。<br></p>
+<h3 id="实例13：使用wget-r-A下载指定格式文件"><a href="#实例13：使用wget-r-A下载指定格式文件" class="headerlink" title="实例13：使用wget -r -A下载指定格式文件"></a>实例13：使用wget -r -A下载指定格式文件</h3><p>命令：<br><br>wget -r -A.pdf url<br><br>说明：<br><br>可以在以下情况使用该功能：<br><br>下载一个网站的所有图片<br><br>下载一个网站的所有视频<br><br>下载一个网站的所有PDF文件<br></p>
+<h3 id="实例14：使用wget-FTP下载"><a href="#实例14：使用wget-FTP下载" class="headerlink" title="实例14：使用wget FTP下载"></a>实例14：使用wget FTP下载</h3><p>命令：<br><br>wget ftp-url<br><br>wget –ftp-user=USERNAME –ftp-password=PASSWORD url<br><br>说明：<br><br>可以使用wget来完成ftp链接的下载。<br><br>使用wget匿名ftp下载：<br><br>wget ftp-url<br><br>使用wget用户名和密码认证的ftp下载<br><br>wget –ftp-user=USERNAME –ftp-password=PASSWORD url<br></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2017/08/24/linux下使用wget下载数据/&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;命令格式&quot;&gt;&lt;a href=&quot;#命令格式&quot; class=&quot;headerlink&quot; title=&quot;命令格式&quot;&gt;&lt;/a&gt;命令格式&lt;/h2&gt;&lt;p&gt;wget [
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yangkai.site/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://yangkai.site/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>转录因子数据库</title>
