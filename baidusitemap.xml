@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yangkai.site/2017/08/10/EGA%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</loc>
-    <lastmod>2017-08-11T00:54:48.000Z</lastmod>
+    <lastmod>2017-08-24T03:00:41.000Z</lastmod>
     <data>
         <display>
         <title>EGA数据下载</title>
@@ -19,16 +19,16 @@
 
     
   <url>
-    <loc>http://yangkai.site/2017/08/10/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2017-08-10T12:32:57.000Z</lastmod>
+    <loc>http://yangkai.site/2017/08/16/%E9%A2%84%E6%B5%8B%E5%9F%BA%E5%9B%A0%E7%9A%84%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/</loc>
+    <lastmod>2017-08-21T11:14:30.000Z</lastmod>
     <data>
         <display>
-        <title>生物信息相关数据库记录</title>
-        <pubTime>2017-08-10T07:19:34.000Z</pubTime>
+        <title>预测基因的转录因子结合位点</title>
+        <pubTime>2017-08-16T01:25:54.000Z</pubTime>
         
-        <tag>数据库</tag>
-         
         <tag>生物信息</tag>
+         
+        <tag>转录因子结合位点</tag>
          
          
            
@@ -40,6 +40,48 @@
     </url>
 
     
+  <url>
+    <loc>http://yangkai.site/2017/08/17/%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2017-08-21T11:14:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>转录因子数据库</title>
+        <pubTime>2017-08-17T03:31:11.000Z</pubTime>
+        
+        <tag>数据库</tag>
+         
+         
+           
+             
+              <breadCrumb title="生物信息" url="http://yangkai.site/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://yangkai.site/2017/08/10/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2017-08-10T12:32:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>生物信息相关数据库记录</title>
+        <pubTime>2017-08-10T07:19:34.000Z</pubTime>
+        
+        <tag>生物信息</tag>
+         
+        <tag>数据库</tag>
+         
+         
+           
+             
+              <breadCrumb title="生物信息" url="http://yangkai.site/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://yangkai.site/2017/08/09/TCGA%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BDR%E5%8C%85-RTCGAToolbox%E8%AF%B4%E6%98%8E/</loc>
@@ -132,21 +174,6 @@
         
         <tag>Tensorflow</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yangkai.site/2017/08/08/test-my-site/</loc>
-    <lastmod>2017-08-08T11:34:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>test_my_site</title>
-        <pubTime>2017-08-08T11:34:02.000Z</pubTime>
-        
          
            
         </display>

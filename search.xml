@@ -3,9 +3,64 @@
   
     
     <entry>
+      <title><![CDATA[转录因子数据库]]></title>
+      <url>/2017/08/17/%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+      <content type="html"><![CDATA[<p><img src="/2017/08/17/转录因子数据库/" alt=""></p>
+<h2 id="JasPar"><a href="#JasPar" class="headerlink" title="JasPar"></a>JasPar</h2><p><a href="http://jaspar.genereg.net" target="_blank" rel="external">http://jaspar.genereg.net</a></p>
+<h2 id="MotifMap"><a href="#MotifMap" class="headerlink" title="MotifMap"></a>MotifMap</h2><p><a href="http://motifmap.ics.uci.edu" target="_blank" rel="external">http://motifmap.ics.uci.edu</a></p>
+<h2 id="TRANSFAC-Matrix-models"><a href="#TRANSFAC-Matrix-models" class="headerlink" title="TRANSFAC Matrix models"></a>TRANSFAC Matrix models</h2><p><a href="http://gene-regulation.com/pub/databases.html" target="_blank" rel="external">http://gene-regulation.com/pub/databases.html</a></p>
+<h2 id="UniPROBE"><a href="#UniPROBE" class="headerlink" title="UniPROBE"></a>UniPROBE</h2><p><a href="http://the_brain.bwh.harvard.edu/uniprobe/browse.php" target="_blank" rel="external">http://the_brain.bwh.harvard.edu/uniprobe/browse.php</a></p>
+<h2 id="Human-Protein-DNA-Interactome-hPDI"><a href="#Human-Protein-DNA-Interactome-hPDI" class="headerlink" title="Human Protein-DNA Interactome(hPDI)"></a>Human Protein-DNA Interactome(hPDI)</h2><p><a href="http://bioinfo.wilmer.jhu.edu/PDI/FAQ.html" target="_blank" rel="external">http://bioinfo.wilmer.jhu.edu/PDI/FAQ.html</a></p>
+<h2 id="Factorbook"><a href="#Factorbook" class="headerlink" title="Factorbook"></a>Factorbook</h2><p><a href="http://v1.factorbook.org/mediawiki/index.php/Welcome_to_factorbook" target="_blank" rel="external">http://v1.factorbook.org/mediawiki/index.php/Welcome_to_factorbook</a></p>
+<h2 id="DBD-TF-prediction-db"><a href="#DBD-TF-prediction-db" class="headerlink" title="DBD - TF prediction db"></a>DBD - TF prediction db</h2><p><a href="http://www.transcriptionfactor.org/index.cgi?Home" target="_blank" rel="external">http://www.transcriptionfactor.org/index.cgi?Home</a></p>
+<h2 id="HOCOMOCO"><a href="#HOCOMOCO" class="headerlink" title="HOCOMOCO"></a>HOCOMOCO</h2><p><a href="http://hocomoco.autosome.ru/" target="_blank" rel="external">http://hocomoco.autosome.ru/</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生物信息 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[预测基因的转录因子结合位点]]></title>
+      <url>/2017/08/16/%E9%A2%84%E6%B5%8B%E5%9F%BA%E5%9B%A0%E7%9A%84%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/</url>
+      <content type="html"><![CDATA[<p><img src="/2017/08/16/预测基因的转录因子结合位点/" alt=""></p>
+<p>brachyury转录因子的结合位点预测<br>    我们拟分析sox5，sox6， sox9 启动子区是否有brachyury转录因子的结合位点，包括大鼠，小鼠和人，查询的数据库包括：JASPAR  database和<br>Genomatix MatInspector database。</p>
+<p>查找启动子区域序列信息：<a href="http://www.genecopoeia.com" target="_blank" rel="external">http://www.genecopoeia.com</a></p>
+<p>查找转录因子和启动子序列<a href="http://biogrid-lasagna.engr.uconn.edu/lasagna_search/" target="_blank" rel="external">LASAGNA-Search 2.0: Searching for transcription factor binding sites (TFBSs)</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 生物信息 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 生物信息 </tag>
+            
+            <tag> 转录因子结合位点 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[EGA数据下载]]></title>
       <url>/2017/08/10/EGA%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
-      <content type="html"><![CDATA[<p>The European Genome-phenome Archive (EGA) is a service for permanent archiving and sharing of all types of personally identifiable genetic and phenotypic data resulting from biomedical research projects.<br><img src="/2017/08/10/EGA数据下载/" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-12/8686360.jpg" alt=""><br>The European Genome-phenome Archive (EGA) is a service for permanent archiving and sharing of all types of personally identifiable genetic and phenotypic data resulting from biomedical research projects.<br><a id="more"></a></p>
 <h2 id="使用客户端下载数据"><a href="#使用客户端下载数据" class="headerlink" title="使用客户端下载数据"></a>使用客户端下载数据</h2><h3 id="下载客户端"><a href="#下载客户端" class="headerlink" title="下载客户端"></a>下载客户端</h3><p><a href="https://www.ebi.ac.uk/ega/sites/ebi.ac.uk.ega/files/documents/EgaDemoClient_2.2.2.zip" target="_blank" rel="external">点击下载</a></p>
 <p>下载的压缩包包含一下四个文件</p>
 <ul>
@@ -13,18 +68,20 @@
 <li>ReadmeQuick start guides (2)</li>
 <li>2 Quick start guides</li>
 </ul>
-<h3 id="客户端调试"><a href="#客户端调试" class="headerlink" title="客户端调试"></a>客户端调试</h3><p>这个工具是用java开发的，要求java版本在1.7+，同时你的下载设备要能上网。TCP的80和443端口要打开。客户端下载数据的服务器所在的ip地址为：193.62.192.14。测试客户端是否能正常运行（假设用户名和密码分别为：user name = demo@test.org, password = 123pass）：<br><figure class="highlight java"><figcaption><span>-jar EgaDemoClient.jar -debug demo@test.org 123pass```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">### 网络优化</div><div class="line">为了最大化下载速度，第一次运行客户端时登录时，先运行以下命令(假设用户名和密码分别为：user name = demo<span class="meta">@test</span>.org, password = <span class="number">123</span>pass)：</div></pre></td></tr></table></figure></p>
-<p>Your computer &gt; java -jar EgaDemoClient.jar<br>Welcome to the EGA Secure Data Shell Demo.<br>Type ‘help’ for help, and ‘exit’ to quit.<br>Ega Demo Download Client  Version: 2.2.2<br>EGA &gt;Login username<br>Password:<br>Login Success!<br>EGA &gt; testbandwidth 7<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">### 登陆</div><div class="line">假设用户名和密码分别为：user name = demo@test.org, password = 123pass.操作时输入自己的用户名和密码</div></pre></td></tr></table></figure></p>
-<p>EGA &gt; login demo@test.org<br>Password: 123pass<br>Login Success!<br>EGA &gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 查看该用户可以访问的数据</div></pre></td></tr></table></figure></p>
-<p>EGA &gt; datasets<br>  EGAD00001001939<br>  EGAD00001001940<br>  EGAD00001001941<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 查看对应数据集下有哪些文件</div></pre></td></tr></table></figure></p>
-<p>EGA &gt; files dataset EGAD00001001941<br>Files in EGAD00001001941:<br>  /EGAZ00001222800/combinedVariant.vcf.cip  183114484657  EGAF00001085014  available<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 查看文件大小</div></pre></td></tr></table></figure></p>
-<p>EGA &gt; size dataset EGAD00001001941<br>Size of dataset EGAD00001001941: 170.5 GB<br>```</p>
+<h3 id="客户端调试"><a href="#客户端调试" class="headerlink" title="客户端调试"></a>客户端调试</h3><p>这个工具是用java开发的，要求java版本在1.7+，同时你的下载设备要能上网。TCP的80和443端口要打开。客户端下载数据的服务器所在的ip地址为：193.62.192.14。测试客户端是否能正常运行（假设用户名和密码分别为：user name = demo@test.org, password = 123pass）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar EgaDemoClient.jar -debug demo@test.org 123pass</div></pre></td></tr></table></figure></p>
+<h3 id="网络优化"><a href="#网络优化" class="headerlink" title="网络优化"></a>网络优化</h3><p>为了最大化下载速度，第一次运行客户端时登录时，先运行以下命令(假设用户名和密码分别为：user name = demo@test.org, password = 123pass)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Your computer &gt; java -jar EgaDemoClient.jar</div><div class="line">Welcome to the EGA Secure Data Shell Demo.</div><div class="line">Type &apos;help&apos; for help, and &apos;exit&apos; to quit.</div><div class="line">Ega Demo Download Client  Version: 2.2.2</div><div class="line">EGA &gt;Login username</div><div class="line">Password:</div><div class="line">Login Success!</div><div class="line">EGA &gt; testbandwidth 7</div></pre></td></tr></table></figure></p>
+<h3 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h3><p>假设用户名和密码分别为：user name = demo@test.org, password = 123pass.操作时输入自己的用户名和密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">EGA &gt; login demo@test.org</div><div class="line">Password: 123pass</div><div class="line">Login Success!</div><div class="line">EGA &gt;</div></pre></td></tr></table></figure></p>
+<h3 id="查看该用户可以访问的数据"><a href="#查看该用户可以访问的数据" class="headerlink" title="查看该用户可以访问的数据"></a>查看该用户可以访问的数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">EGA &gt; datasets</div><div class="line">  EGAD00001001939</div><div class="line">  EGAD00001001940</div><div class="line">  EGAD00001001941</div></pre></td></tr></table></figure>
+<h3 id="查看对应数据集下有哪些文件"><a href="#查看对应数据集下有哪些文件" class="headerlink" title="查看对应数据集下有哪些文件"></a>查看对应数据集下有哪些文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">EGA &gt; files dataset EGAD00001001941</div><div class="line">Files in EGAD00001001941:</div><div class="line">  /EGAZ00001222800/combinedVariant.vcf.cip  183114484657  EGAF00001085014  available</div></pre></td></tr></table></figure>
+<h3 id="查看文件大小"><a href="#查看文件大小" class="headerlink" title="查看文件大小"></a>查看文件大小</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">EGA &gt; size dataset EGAD00001001941</div><div class="line">Size of dataset EGAD00001001941: 170.5 GB</div></pre></td></tr></table></figure>
 <h3 id="下载数据"><a href="#下载数据" class="headerlink" title="下载数据"></a>下载数据</h3><ul>
 <li>选在下载的类型，整个数据集或单个文件</li>
 <li>加入你要下载的内容</li>
 <li>设置一个加密密钥</li>
 <li>设置一个下载标签</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">EGA &gt; request dataset EGAD00010000498 abc request_EGAD00010000498</div><div class="line">Requesting.... (This may take longer if there are pending files in the request)</div><div class="line">Resulting Request: request_EGAD00010000498 (19 file requests).</div></pre></td></tr></table></figure>
+<p>参考文档：<a href="https://ega-archive.org/using-ega-download-client" target="_blank" rel="external">https://ega-archive.org/using-ega-download-client</a></p>
 ]]></content>
       
         
@@ -45,9 +102,9 @@
         
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> 生物信息 </tag>
+            
+            <tag> 数据库 </tag>
             
         </tags>
         
@@ -152,14 +209,6 @@
             <tag> Tensorflow </tag>
             
         </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[test_my_site]]></title>
-      <url>/2017/08/08/test-my-site/</url>
-      <content type="html"></content>
-      
         
     </entry>
     
