@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangkai.site/"/>
-  <updated>2017-08-24T10:19:08.000Z</updated>
+  <updated>2017-08-24T11:17:12.000Z</updated>
   <id>http://yangkai.site/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://yangkai.site/2017/08/24/linux%E4%B8%8B%E4%BD%BF%E7%94%A8wget%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE/"/>
     <id>http://yangkai.site/2017/08/24/linux下使用wget下载数据/</id>
     <published>2017-08-24T08:26:51.000Z</published>
-    <updated>2017-08-24T10:19:08.000Z</updated>
+    <updated>2017-08-24T11:17:12.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/2017/08/24/linux下使用wget下载数据/" alt=""></p>
-<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><p>wget [参数] [URL地址]</p>
+    <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-12/15536111.jpg" alt=""></p>
+<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><p>wget [参数] [URL地址]<br><a id="more"></a></p>
 <h2 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h2><h3 id="启动参数"><a href="#启动参数" class="headerlink" title="启动参数"></a>启动参数</h3><p>-V, –version 显示wget的版本后退出<br><br>-h, –help 打印语法帮助<br><br>-b, –background 启动后转入后台执行<br><br>-e, –execute=COMMAND 执行`.wgetrc’格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc<br></p>
 <h3 id="记录和输入文件参数"><a href="#记录和输入文件参数" class="headerlink" title="记录和输入文件参数"></a>记录和输入文件参数</h3><p>-o, –output-file=FILE 把记录写到FILE文件中<br><br>-a, –append-output=FILE 把记录追加到FILE文件中<br><br>-d, –debug 打印调试输出<br><br>-q, –quiet 安静模式(没有输出)<br><br>-v, –verbose 冗长模式(这是缺省设置)<br><br>-nv, –non-verbose 关掉冗长模式，但不是安静模式<br><br>-i, –input-file=FILE 下载在FILE文件中出现的URLs<br><br>-F, –force-html 把输入文件当作HTML格式文件对待<br><br>-B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀<br><br>–sslcertfile=FILE 可选客户端证书<br><br>–sslcertkey=KEYFILE 可选客户端证书的KEYFILE<br><br>–egd-file=FILE 指定EGD socket的文件名<br></p>
 <h3 id="下载参数"><a href="#下载参数" class="headerlink" title="下载参数"></a>下载参数</h3><p>–bind-address=ADDRESS 指定本地使用地址(主机名或IP，当本地有多个IP或名字时使用)<br><br>-t, –tries=NUMBER 设定最大尝试链接次数(0 表示无限制).<br><br>-O –output-document=FILE 把文档写到FILE文件中<br><br>-nc, –no-clobber 不要覆盖存在的文件或使用.#前缀<br><br>-c, –continue 接着下载没下载完的文件<br><br>–progress=TYPE 设定进程条标记<br><br>-N, –timestamping 不要重新下载文件除非比本地文件新<br><br>-S, –server-response 打印服务器的回应<br><br>–spider 不下载任何东西<br><br>-T, –timeout=SECONDS 设定响应超时的秒数<br><br>-w, –wait=SECONDS 两次尝试之间间隔SECONDS秒<br><br>–waitretry=SECONDS 在重新链接之间等待1…SECONDS秒<br><br>–random-wait 在下载之间等待0…2*WAIT秒<br><br>-Y, –proxy=on/off 打开或关闭代理<br><br>-Q, –quota=NUMBER 设置下载的容量限制<br><br>–limit-rate=RATE 限定下载输率<br></p>
@@ -51,8 +51,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/2017/08/24/linux下使用wget下载数据/&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;命令格式&quot;&gt;&lt;a href=&quot;#命令格式&quot; class=&quot;headerlink&quot; title=&quot;命令格式&quot;&gt;&lt;/a&gt;命令格式&lt;/h2&gt;&lt;p&gt;wget [
+      &lt;p&gt;&lt;img src=&quot;http://ouemmffgy.bkt.clouddn.com/17-8-12/15536111.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;命令格式&quot;&gt;&lt;a href=&quot;#命令格式&quot; class=&quot;headerlink&quot; title=&quot;命令格式&quot;&gt;&lt;/a&gt;命令格式&lt;/h2&gt;&lt;p&gt;wget [参数] [URL地址]&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
