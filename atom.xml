@@ -81,7 +81,7 @@
     <link href="http://yangkai.site/2017/08/10/EGA%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/"/>
     <id>http://yangkai.site/2017/08/10/EGA数据下载/</id>
     <published>2017-08-10T12:31:35.000Z</published>
-    <updated>2017-08-24T03:00:41.000Z</updated>
+    <updated>2017-08-24T03:05:07.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-12/8686360.jpg" alt=""><br>The European Genome-phenome Archive (EGA) is a service for permanent archiving and sharing of all types of personally identifiable genetic and phenotypic data resulting from biomedical research projects.<br><a id="more"></a></p>
 <h2 id="使用客户端下载数据"><a href="#使用客户端下载数据" class="headerlink" title="使用客户端下载数据"></a>使用客户端下载数据</h2><h3 id="下载客户端"><a href="#下载客户端" class="headerlink" title="下载客户端"></a>下载客户端</h3><p><a href="https://www.ebi.ac.uk/ega/sites/ebi.ac.uk.ega/files/documents/EgaDemoClient_2.2.2.zip" target="_blank" rel="external">点击下载</a></p>
@@ -135,9 +135,9 @@
       <category term="生物信息" scheme="http://yangkai.site/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/"/>
     
     
-      <category term="生物信息" scheme="http://yangkai.site/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/"/>
-    
       <category term="数据库" scheme="http://yangkai.site/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="生物信息" scheme="http://yangkai.site/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/"/>
     
   </entry>
   
