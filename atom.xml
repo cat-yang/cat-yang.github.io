@@ -100,9 +100,10 @@
     <link href="http://yangkai.site/2017/08/16/%E9%A2%84%E6%B5%8B%E5%9F%BA%E5%9B%A0%E7%9A%84%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/"/>
     <id>http://yangkai.site/2017/08/16/预测基因的转录因子结合位点/</id>
     <published>2017-08-16T01:25:54.000Z</published>
-    <updated>2017-08-28T09:57:45.000Z</updated>
+    <updated>2017-08-28T10:10:25.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="查找基因启动子区域序列"><a href="#查找基因启动子区域序列" class="headerlink" title="查找基因启动子区域序列"></a>查找基因启动子区域序列</h2><ul>
+    <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-28/75409992.jpg" alt=""><br><a id="more"></a></p>
+<h2 id="查找基因启动子区域序列"><a href="#查找基因启动子区域序列" class="headerlink" title="查找基因启动子区域序列"></a>查找基因启动子区域序列</h2><ul>
 <li>查找启动子区域序列信息：<a href="http://www.genecopoeia.com" target="_blank" rel="external">http://www.genecopoeia.com</a></li>
 <li>输入要查询的基因名<img src="http://ouemmffgy.bkt.clouddn.com/17-8-28/80754218.jpg" alt=""></li>
 <li>点击要查看的启动子信息<img src="http://ouemmffgy.bkt.clouddn.com/17-8-28/1186252.jpg" alt=""></li>
@@ -121,8 +122,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;查找基因启动子区域序列&quot;&gt;&lt;a href=&quot;#查找基因启动子区域序列&quot; class=&quot;headerlink&quot; title=&quot;查找基因启动子区域序列&quot;&gt;&lt;/a&gt;查找基因启动子区域序列&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;查找启动子区域序列信息：&lt;a href=&quot;http://
+      &lt;p&gt;&lt;img src=&quot;http://ouemmffgy.bkt.clouddn.com/17-8-28/75409992.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -295,9 +295,10 @@
     <link href="http://yangkai.site/2017/08/08/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Tensorflow/"/>
     <id>http://yangkai.site/2017/08/08/Linux下安装Tensorflow/</id>
     <published>2017-08-08T14:04:35.000Z</published>
-    <updated>2017-08-09T04:52:39.000Z</updated>
+    <updated>2017-08-28T10:15:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="通过anaconda来安装"><a href="#通过anaconda来安装" class="headerlink" title="通过anaconda来安装"></a>通过anaconda来安装</h2><p> <a href="https://www.continuum.io/why-anaconda" target="_blank" rel="external">Anaconda</a> 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的<a href="http://conda.pydata.org/docs/using/envs.html" target="_blank" rel="external">计算环境</a>,类似 Virtualenv.<br>在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。</p>
+    <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-28/64231227.jpg" alt=""><br><a id="more"></a></p>
+<h2 id="通过anaconda来安装"><a href="#通过anaconda来安装" class="headerlink" title="通过anaconda来安装"></a>通过anaconda来安装</h2><p> <a href="https://www.continuum.io/why-anaconda" target="_blank" rel="external">Anaconda</a> 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的<a href="http://conda.pydata.org/docs/using/envs.html" target="_blank" rel="external">计算环境</a>,类似 Virtualenv.<br>在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。</p>
 <ul>
 <li>安装anaconda</li>
 <li>通过conda建立一个tensorflow计算环境</li>
@@ -312,7 +313,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;通过anaconda来安装&quot;&gt;&lt;a href=&quot;#通过anaconda来安装&quot; class=&quot;headerlink&quot; title=&quot;通过anaconda来安装&quot;&gt;&lt;/a&gt;通过anaconda来安装&lt;/h2&gt;&lt;p&gt; &lt;a href=&quot;https://www.cont
+      &lt;p&gt;&lt;img src=&quot;http://ouemmffgy.bkt.clouddn.com/17-8-28/64231227.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     

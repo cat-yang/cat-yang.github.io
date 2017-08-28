@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yangkai.site/2017/08/08/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Tensorflow/</loc>
+    
+    <lastmod>2017-08-28T10:15:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yangkai.site/2017/08/16/%E9%A2%84%E6%B5%8B%E5%9F%BA%E5%9B%A0%E7%9A%84%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/</loc>
     
-    <lastmod>2017-08-28T09:57:45.000Z</lastmod>
+    <lastmod>2017-08-28T10:10:25.000Z</lastmod>
     
   </url>
   
@@ -82,13 +89,6 @@
     <loc>http://yangkai.site/tags/index.html</loc>
     
     <lastmod>2017-08-09T05:36:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yangkai.site/2017/08/08/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Tensorflow/</loc>
-    
-    <lastmod>2017-08-09T04:52:39.000Z</lastmod>
     
   </url>
   

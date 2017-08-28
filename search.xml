@@ -79,7 +79,8 @@
     <entry>
       <title><![CDATA[预测基因的转录因子结合位点]]></title>
       <url>/2017/08/16/%E9%A2%84%E6%B5%8B%E5%9F%BA%E5%9B%A0%E7%9A%84%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/</url>
-      <content type="html"><![CDATA[<h2 id="查找基因启动子区域序列"><a href="#查找基因启动子区域序列" class="headerlink" title="查找基因启动子区域序列"></a>查找基因启动子区域序列</h2><ul>
+      <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-28/75409992.jpg" alt=""><br><a id="more"></a></p>
+<h2 id="查找基因启动子区域序列"><a href="#查找基因启动子区域序列" class="headerlink" title="查找基因启动子区域序列"></a>查找基因启动子区域序列</h2><ul>
 <li>查找启动子区域序列信息：<a href="http://www.genecopoeia.com" target="_blank" rel="external">http://www.genecopoeia.com</a></li>
 <li>输入要查询的基因名<img src="http://ouemmffgy.bkt.clouddn.com/17-8-28/80754218.jpg" alt=""></li>
 <li>点击要查看的启动子信息<img src="http://ouemmffgy.bkt.clouddn.com/17-8-28/1186252.jpg" alt=""></li>
@@ -248,7 +249,8 @@
     <entry>
       <title><![CDATA[Linux下安装Tensorflow]]></title>
       <url>/2017/08/08/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Tensorflow/</url>
-      <content type="html"><![CDATA[<h2 id="通过anaconda来安装"><a href="#通过anaconda来安装" class="headerlink" title="通过anaconda来安装"></a>通过anaconda来安装</h2><p> <a href="https://www.continuum.io/why-anaconda" target="_blank" rel="external">Anaconda</a> 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的<a href="http://conda.pydata.org/docs/using/envs.html" target="_blank" rel="external">计算环境</a>,类似 Virtualenv.<br>在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。</p>
+      <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-28/64231227.jpg" alt=""><br><a id="more"></a></p>
+<h2 id="通过anaconda来安装"><a href="#通过anaconda来安装" class="headerlink" title="通过anaconda来安装"></a>通过anaconda来安装</h2><p> <a href="https://www.continuum.io/why-anaconda" target="_blank" rel="external">Anaconda</a> 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的<a href="http://conda.pydata.org/docs/using/envs.html" target="_blank" rel="external">计算环境</a>,类似 Virtualenv.<br>在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。</p>
 <ul>
 <li>安装anaconda</li>
 <li>通过conda建立一个tensorflow计算环境</li>
