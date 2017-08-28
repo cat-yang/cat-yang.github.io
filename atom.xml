@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>YangKai&#39;s Blog</title>
-  <subtitle>BioInformation &amp; Data Ming</subtitle>
+  <subtitle>BioInformation &amp; Data Mining</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangkai.site/"/>
