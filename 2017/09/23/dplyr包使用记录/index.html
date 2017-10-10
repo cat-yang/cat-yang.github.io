@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Bioinformation,data ming" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="基本操作按照指定条件过滤数据filter() 按给定的逻辑判断筛选出符合要求的子数据集, 类似于 base::subset() 函数，例如: 1234567891011library(dplyr)library(hflights)head(hflights)Year	Month	DayofMonth	DayOfWeek	DepTime	ArrTime	UniqueCarrier	FlightNu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dplyr包使用记录">
+<meta property="og:url" content="http://yangkai.site/2017/09/23/dplyr包使用记录/index.html">
+<meta property="og:site_name" content="YangKai&#39;s Blog">
+<meta property="og:description" content="基本操作按照指定条件过滤数据filter() 按给定的逻辑判断筛选出符合要求的子数据集, 类似于 base::subset() 函数，例如: 1234567891011library(dplyr)library(hflights)head(hflights)Year	Month	DayofMonth	DayOfWeek	DepTime	ArrTime	UniqueCarrier	FlightNu">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yangkai.site/2017/09/23/dplyr包使用记录/">
+<meta property="og:updated_time" content="2017-09-25T09:21:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dplyr包使用记录">
+<meta name="twitter:description" content="基本操作按照指定条件过滤数据filter() 按给定的逻辑判断筛选出符合要求的子数据集, 类似于 base::subset() 函数，例如: 1234567891011library(dplyr)library(hflights)head(hflights)Year	Month	DayofMonth	DayOfWeek	DepTime	ArrTime	UniqueCarrier	FlightNu">
+<meta name="twitter:image" content="http://yangkai.site/2017/09/23/dplyr包使用记录/">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yangkai.site/2017/09/23/dplyr包使用记录/"/>
+
+
+
+
+
+  <title>dplyr包使用记录 | YangKai's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YangKai's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">BioInformation & Data Mining</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangkai.site/2017/09/23/dplyr包使用记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YangKai">
+      <meta itemprop="description" content="一个人只有今生今世是不够的,他还应当有诗意的世界。">
+      <meta itemprop="image" content="http://ouemmffgy.bkt.clouddn.com/17-8-9/94180770.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YangKai's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">dplyr包使用记录</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-23T11:20:51+08:00">
+                2017-09-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2017/09/23/dplyr包使用记录/" alt=""></p>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h3 id="按照指定条件过滤数据filter"><a href="#按照指定条件过滤数据filter" class="headerlink" title="按照指定条件过滤数据filter()"></a>按照指定条件过滤数据filter()</h3><ul>
+<li><p>按给定的逻辑判断筛选出符合要求的子数据集, 类似于 base::subset() 函数，例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">library(dplyr)</div><div class="line">library(hflights)</div><div class="line">head(hflights)</div><div class="line">Year	Month	DayofMonth	DayOfWeek	DepTime	ArrTime	UniqueCarrier	FlightNum	TailNum	ActualElapsedTime	...	ArrDelay	DepDelay	Origin	Dest	Distance	TaxiIn	TaxiOut	Cancelled	CancellationCode	Diverted</div><div class="line">5424	2011	1	1	6	1400	1500	AA	428	N576AA	60	...	-10	0	IAH	DFW	224	7	13	0		0</div><div class="line">5425	2011	1	2	7	1401	1501	AA	428	N557AA	60	...	-9	1	IAH	DFW	224	6	9	0		0</div><div class="line">5426	2011	1	3	1	1352	1502	AA	428	N541AA	70	...	-8	-8	IAH	DFW	224	5	17	0		0</div><div class="line">5427	2011	1	4	2	1403	1513	AA	428	N403AA	70	...	3	3	IAH	DFW	224	9	22	0		0</div><div class="line">5428	2011	1	5	3	1405	1507	AA	428	N492AA	62	...	-3	5	IAH	DFW	224	9	9	0		0</div><div class="line">5429	2011	1	6	4	1359	1503	AA	428	N26</div><div class="line">filter(hflights, Month == 1, DayofMonth == 1)</div></pre></td></tr></table></figure>
+</li>
+<li><p>除了代码简洁外, 还支持对同一对象的任意个条件组合， 如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">filter(hflights,Month %in% c(1,2)) 或</div><div class="line">filter(hflights,Month == 1| Month == 2)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="排列-arrange"><a href="#排列-arrange" class="headerlink" title="排列 arrange()"></a>排列 arrange()</h3><ul>
+<li><p>对给定的列名依次进行排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrange(hflights, DayofMonth, Month, Year)</div></pre></td></tr></table></figure>
+</li>
+<li><p>对指定列的数据进行倒叙排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#对ArrDelay进行倒叙排序</div><div class="line">arrange(hflights,desc(ArrDelay))</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="选择指定数据select"><a href="#选择指定数据select" class="headerlink" title="选择指定数据select()"></a>选择指定数据select()</h3><ul>
+<li><p>输入列名，来选择子集数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select(hflights, Year, Month, DayOfWeek)</div></pre></td></tr></table></figure>
+</li>
+<li><p>还可以用 : 来连接列名,指定所选列名的范围</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select(hflights, Year:DayOfWeek)</div></pre></td></tr></table></figure>
+</li>
+<li><p>用负号‘-’来排除列名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select(hflights, -(Year:DayOfWeek))</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="变形：mutate"><a href="#变形：mutate" class="headerlink" title="变形：mutate()"></a>变形：mutate()</h3><ul>
+<li><p>对已有列进行数据运算并添加为新列：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mutate(hflights,</div><div class="line">   gain = ArrDelay - DepDelay,</div><div class="line">   speed = Distance / AirTime * 60</div><div class="line">)</div></pre></td></tr></table></figure>
+</li>
+<li><p>作用与 plyr::mutate() 相同，与 base::transform() 相似，优势在于可以在同一语句中对刚增加的列进行操作:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mutate(hflights_df,</div><div class="line">   gain = ArrDelay - DepDelay,</div><div class="line">   gain_per_hour = gain / (AirTime / 60)</div><div class="line">)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="汇总：summarise"><a href="#汇总：summarise" class="headerlink" title="汇总：summarise()"></a>汇总：summarise()</h3><ul>
+<li>对数据框调用其它函数进行汇总操作， 返回一维的结果：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">summarise(hflights,</div><div class="line">  delay = mean(DepDelay, na.rm = TRUE))</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="抽样：sample-n-sample-frac"><a href="#抽样：sample-n-sample-frac" class="headerlink" title="抽样：sample_n(), sample_frac()"></a>抽样：sample_n(), sample_frac()</h3><p>抽样函数表示从表中随机抽取任意行数据。</p>
+<ul>
+<li><p>按具体个数抽取：sample_n()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sample_n(airquality, size = 10)</div></pre></td></tr></table></figure>
+</li>
+<li><p>按比例抽取sample_frac()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sample_frac(airquality, size = 0.1)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="计数-count"><a href="#计数-count" class="headerlink" title="计数:count()"></a>计数:count()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">count(airquality, Month)</div><div class="line">	Month	n</div><div class="line"> 1     5	31</div><div class="line"> 2     6	30</div><div class="line"> 3     7	31</div><div class="line"> 4     8	31</div><div class="line"> 5     9	30</div></pre></td></tr></table></figure>
+<h2 id="分组动作-group-by"><a href="#分组动作-group-by" class="headerlink" title="分组动作 group_by()"></a>分组动作 group_by()</h2><p>以上5个动词函数已经很方便了， 但是当它们跟分组操作这个概念结合起来时，那才叫真正的强大！ 当对数据集通过group_by() 添加了分组信息后，mutate()、 arrange()和summarise()函数会自动对这些tbl类数据执行分组操作 (R语言泛型函数的优势)。例如：对飞机航班数据按飞机编号(TailNum)进行分组，计算该飞机航班的次数 (count = n())，平均飞行距离(dist = mean(Distance, na.rm = TRUE))和延时(delay = mean(ArrDelay, na.rm = TRUE))。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">planes &lt;- group_by(hflights, TailNum)</div><div class="line">delay &lt;- summarise(planes, count = n(), dist = mean(Distance, na.rm = TRUE), delay = mean(ArrDelay, na.rm = TRUE))</div><div class="line">delay &lt;- filter(delay, count &gt; 20, dist &lt; 2000)</div><div class="line">ggplot(delay, aes(dist, delay)) + geom_point(aes(size = count), alpha = 1/2) + geom_smooth() + scale_size_area()</div></pre></td></tr></table></figure></p>
+<p>使用到的一些函数汇总<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">n(): 计算个数。</div><div class="line">n_distinct(): 计算 x 中唯一值的个数。</div><div class="line">mean() 计算平均值</div><div class="line">first(x), last(x) 和 nth(x, n): 返回对应秩的值, 类似于自带函数 x[1], x[length(x)], 和 x[n]</div></pre></td></tr></table></figure></p>
+<h2 id="连接符"><a href="#连接符" class="headerlink" title="连接符 %.%"></a>连接符 %.%</h2><p>包里还新引进了一个操作符， 使用时把数据名作为开头， 然后依次对此数据进行多步操作。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Batting %.%</div><div class="line">        group_by(playerID) %.%</div><div class="line">        summarise(total = sum(G)) %.%</div><div class="line">        arrange(desc(total)) %.%</div><div class="line">        head(5)</div><div class="line"># 结果</div><div class="line">	playerID total</div><div class="line">1 henderi01  2295</div><div class="line">2  cobbty01  2246</div><div class="line">3 bondsba01  2227</div><div class="line">4  ruthba01  2174</div><div class="line">5 aaronha01  2174</div></pre></td></tr></table></figure></p>
+<h2 id="实用代码汇总"><a href="#实用代码汇总" class="headerlink" title="实用代码汇总"></a>实用代码汇总</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">library(dplyr)</div><div class="line">#将数据整理成的tbl_df数据(处理速度快)</div><div class="line">iris &lt;- tbl_df(iris)</div><div class="line">##变量筛选select  对应select  删除-</div><div class="line">select(iris,Sepal.Length,Sepal.Width)</div><div class="line">select(iris,-Species)</div><div class="line">##对数据运算并添加为新列mutate() 对应 count(a) as t1</div><div class="line">mutate(iris,t1=Sepal.Length*2)</div><div class="line">##计算</div><div class="line">n(): 计算个数</div><div class="line">n_distinct() #: 计算 x 中唯一值的个数</div><div class="line">first(x), last(x) 和 nth(x, n)#: 返回对应秩的值, 类似于自带函数 x[1], x[length(x)], 和 x[n]</div><div class="line">##过滤filter  对应 where</div><div class="line">filter(iris,Sepal.Length&gt;5,Sepal.Width&lt;4)</div><div class="line">filter(iris,Sepal.Length&gt;5 &amp; Sepal.Width&lt;4 &amp; (Species == &quot;setosa&quot; | Species == &quot;versicolor&quot;))</div><div class="line">##数据排序arrange  对应 order by</div><div class="line">arrange(iris,Sepal.Length)</div><div class="line">arrange(iris,desc(Sepal.Length))</div><div class="line">##汇总group_by() 分组-汇总</div><div class="line">group_by(iris, Species)</div><div class="line">group_by(iris,Species,Petal.Width)  %&gt;% summarise(c1=n(),c2=n_distinct(Species))</div><div class="line">##计算summarise()</div><div class="line">summarise(iris,c1=n(),c2=mean(Sepal.Length))</div><div class="line">##多步操作连接符%&gt;%</div><div class="line">filter(iris,Sepal.Length&gt;5,Sepal.Width&lt;4) %&gt;% summarise(c1=n(),c2=mean(Sepal.Length))</div><div class="line">##抽样sample_n sample_frac</div><div class="line">sample_n(iris,20)</div><div class="line">##左连接 ab交集 差集</div><div class="line">left_join(a, b, by=&quot;x1&quot;)</div><div class="line">right_join(a, b, by=&quot;x1&quot;)</div><div class="line">inner_join(a, b, by=&quot;x1&quot;)##保留匹配的数据</div><div class="line">outer_join(a, b, by=&quot;x1&quot;)##保留所有数据</div><div class="line">semi_join(a, b, by=&quot;x1&quot;) # 数据集a中能与数据集b匹配的记录</div><div class="line">anti_join(a, b, by=&quot;x1&quot;) # 数据集a中雨数据集b不匹配的记录</div><div class="line">intersect(x, y): x 和 y 的交集（按行）</div><div class="line">union(x, y): x 和 y 的并集（按行）</div><div class="line">setdiff(x, y): x 和 y 的补集 （在x中不在y中）</div><div class="line">##列合并</div><div class="line">bind_cols(y, z)</div><div class="line">##行合并</div><div class="line">bind_rows(y, z)</div></pre></td></tr></table></figure>
+<h2 id="深入学习"><a href="#深入学习" class="headerlink" title="深入学习"></a>深入学习</h2><ul>
+<li>dplyr 包自带的60页<a href="https://cran.rstudio.com/web/packages/dplyr/dplyr.pdf" target="_blank" rel="external">详细文档</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="YangKai WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpeg" alt="YangKai Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/22/肿瘤生物信息分析相关名词记录/" rel="next" title="肿瘤生物信息分析相关名词记录">
+                <i class="fa fa-chevron-left"></i> 肿瘤生物信息分析相关名词记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ouemmffgy.bkt.clouddn.com/17-8-9/94180770.jpg"
+               alt="YangKai" />
+          <p class="site-author-name" itemprop="name">YangKai</p>
+           
+              <p class="site-description motion-element" itemprop="description">一个人只有今生今世是不够的,他还应当有诗意的世界。</p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作"><span class="nav-number">1.</span> <span class="nav-text">基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#按照指定条件过滤数据filter"><span class="nav-number">1.1.</span> <span class="nav-text">按照指定条件过滤数据filter()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排列-arrange"><span class="nav-number">1.2.</span> <span class="nav-text">排列 arrange()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择指定数据select"><span class="nav-number">1.3.</span> <span class="nav-text">选择指定数据select()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变形：mutate"><span class="nav-number">1.4.</span> <span class="nav-text">变形：mutate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#汇总：summarise"><span class="nav-number">1.5.</span> <span class="nav-text">汇总：summarise()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽样：sample-n-sample-frac"><span class="nav-number">1.6.</span> <span class="nav-text">抽样：sample_n(), sample_frac()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计数-count"><span class="nav-number">1.7.</span> <span class="nav-text">计数:count()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组动作-group-by"><span class="nav-number">2.</span> <span class="nav-text">分组动作 group_by()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接符"><span class="nav-number">3.</span> <span class="nav-text">连接符 %.%</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实用代码汇总"><span class="nav-number">4.</span> <span class="nav-text">实用代码汇总</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深入学习"><span class="nav-number">5.</span> <span class="nav-text">深入学习</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YangKai</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Gemini
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人次
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -30px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/hijiki/hijiki.model.json")</script>
+  
+</body>
+</html>

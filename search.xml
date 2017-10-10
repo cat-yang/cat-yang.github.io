@@ -3,6 +3,170 @@
   
     
     <entry>
+      <title><![CDATA[dplyr包使用记录]]></title>
+      <url>/2017/09/23/dplyr%E5%8C%85%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<p><img src="/2017/09/23/dplyr包使用记录/" alt=""></p>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h3 id="按照指定条件过滤数据filter"><a href="#按照指定条件过滤数据filter" class="headerlink" title="按照指定条件过滤数据filter()"></a>按照指定条件过滤数据filter()</h3><ul>
+<li><p>按给定的逻辑判断筛选出符合要求的子数据集, 类似于 base::subset() 函数，例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">library(dplyr)</div><div class="line">library(hflights)</div><div class="line">head(hflights)</div><div class="line">Year	Month	DayofMonth	DayOfWeek	DepTime	ArrTime	UniqueCarrier	FlightNum	TailNum	ActualElapsedTime	...	ArrDelay	DepDelay	Origin	Dest	Distance	TaxiIn	TaxiOut	Cancelled	CancellationCode	Diverted</div><div class="line">5424	2011	1	1	6	1400	1500	AA	428	N576AA	60	...	-10	0	IAH	DFW	224	7	13	0		0</div><div class="line">5425	2011	1	2	7	1401	1501	AA	428	N557AA	60	...	-9	1	IAH	DFW	224	6	9	0		0</div><div class="line">5426	2011	1	3	1	1352	1502	AA	428	N541AA	70	...	-8	-8	IAH	DFW	224	5	17	0		0</div><div class="line">5427	2011	1	4	2	1403	1513	AA	428	N403AA	70	...	3	3	IAH	DFW	224	9	22	0		0</div><div class="line">5428	2011	1	5	3	1405	1507	AA	428	N492AA	62	...	-3	5	IAH	DFW	224	9	9	0		0</div><div class="line">5429	2011	1	6	4	1359	1503	AA	428	N26</div><div class="line">filter(hflights, Month == 1, DayofMonth == 1)</div></pre></td></tr></table></figure>
+</li>
+<li><p>除了代码简洁外, 还支持对同一对象的任意个条件组合， 如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">filter(hflights,Month %in% c(1,2)) 或</div><div class="line">filter(hflights,Month == 1| Month == 2)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="排列-arrange"><a href="#排列-arrange" class="headerlink" title="排列 arrange()"></a>排列 arrange()</h3><ul>
+<li><p>对给定的列名依次进行排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrange(hflights, DayofMonth, Month, Year)</div></pre></td></tr></table></figure>
+</li>
+<li><p>对指定列的数据进行倒叙排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#对ArrDelay进行倒叙排序</div><div class="line">arrange(hflights,desc(ArrDelay))</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="选择指定数据select"><a href="#选择指定数据select" class="headerlink" title="选择指定数据select()"></a>选择指定数据select()</h3><ul>
+<li><p>输入列名，来选择子集数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select(hflights, Year, Month, DayOfWeek)</div></pre></td></tr></table></figure>
+</li>
+<li><p>还可以用 : 来连接列名,指定所选列名的范围</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select(hflights, Year:DayOfWeek)</div></pre></td></tr></table></figure>
+</li>
+<li><p>用负号‘-’来排除列名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select(hflights, -(Year:DayOfWeek))</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="变形：mutate"><a href="#变形：mutate" class="headerlink" title="变形：mutate()"></a>变形：mutate()</h3><ul>
+<li><p>对已有列进行数据运算并添加为新列：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mutate(hflights,</div><div class="line">   gain = ArrDelay - DepDelay,</div><div class="line">   speed = Distance / AirTime * 60</div><div class="line">)</div></pre></td></tr></table></figure>
+</li>
+<li><p>作用与 plyr::mutate() 相同，与 base::transform() 相似，优势在于可以在同一语句中对刚增加的列进行操作:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mutate(hflights_df,</div><div class="line">   gain = ArrDelay - DepDelay,</div><div class="line">   gain_per_hour = gain / (AirTime / 60)</div><div class="line">)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="汇总：summarise"><a href="#汇总：summarise" class="headerlink" title="汇总：summarise()"></a>汇总：summarise()</h3><ul>
+<li>对数据框调用其它函数进行汇总操作， 返回一维的结果：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">summarise(hflights,</div><div class="line">  delay = mean(DepDelay, na.rm = TRUE))</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="抽样：sample-n-sample-frac"><a href="#抽样：sample-n-sample-frac" class="headerlink" title="抽样：sample_n(), sample_frac()"></a>抽样：sample_n(), sample_frac()</h3><p>抽样函数表示从表中随机抽取任意行数据。</p>
+<ul>
+<li><p>按具体个数抽取：sample_n()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sample_n(airquality, size = 10)</div></pre></td></tr></table></figure>
+</li>
+<li><p>按比例抽取sample_frac()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sample_frac(airquality, size = 0.1)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="计数-count"><a href="#计数-count" class="headerlink" title="计数:count()"></a>计数:count()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">count(airquality, Month)</div><div class="line">	Month	n</div><div class="line"> 1     5	31</div><div class="line"> 2     6	30</div><div class="line"> 3     7	31</div><div class="line"> 4     8	31</div><div class="line"> 5     9	30</div></pre></td></tr></table></figure>
+<h2 id="分组动作-group-by"><a href="#分组动作-group-by" class="headerlink" title="分组动作 group_by()"></a>分组动作 group_by()</h2><p>以上5个动词函数已经很方便了， 但是当它们跟分组操作这个概念结合起来时，那才叫真正的强大！ 当对数据集通过group_by() 添加了分组信息后，mutate()、 arrange()和summarise()函数会自动对这些tbl类数据执行分组操作 (R语言泛型函数的优势)。例如：对飞机航班数据按飞机编号(TailNum)进行分组，计算该飞机航班的次数 (count = n())，平均飞行距离(dist = mean(Distance, na.rm = TRUE))和延时(delay = mean(ArrDelay, na.rm = TRUE))。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">planes &lt;- group_by(hflights, TailNum)</div><div class="line">delay &lt;- summarise(planes, count = n(), dist = mean(Distance, na.rm = TRUE), delay = mean(ArrDelay, na.rm = TRUE))</div><div class="line">delay &lt;- filter(delay, count &gt; 20, dist &lt; 2000)</div><div class="line">ggplot(delay, aes(dist, delay)) + geom_point(aes(size = count), alpha = 1/2) + geom_smooth() + scale_size_area()</div></pre></td></tr></table></figure></p>
+<p>使用到的一些函数汇总<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">n(): 计算个数。</div><div class="line">n_distinct(): 计算 x 中唯一值的个数。</div><div class="line">mean() 计算平均值</div><div class="line">first(x), last(x) 和 nth(x, n): 返回对应秩的值, 类似于自带函数 x[1], x[length(x)], 和 x[n]</div></pre></td></tr></table></figure></p>
+<h2 id="连接符"><a href="#连接符" class="headerlink" title="连接符 %.%"></a>连接符 %.%</h2><p>包里还新引进了一个操作符， 使用时把数据名作为开头， 然后依次对此数据进行多步操作。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Batting %.%</div><div class="line">        group_by(playerID) %.%</div><div class="line">        summarise(total = sum(G)) %.%</div><div class="line">        arrange(desc(total)) %.%</div><div class="line">        head(5)</div><div class="line"># 结果</div><div class="line">	playerID total</div><div class="line">1 henderi01  2295</div><div class="line">2  cobbty01  2246</div><div class="line">3 bondsba01  2227</div><div class="line">4  ruthba01  2174</div><div class="line">5 aaronha01  2174</div></pre></td></tr></table></figure></p>
+<h2 id="实用代码汇总"><a href="#实用代码汇总" class="headerlink" title="实用代码汇总"></a>实用代码汇总</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">library(dplyr)</div><div class="line">#将数据整理成的tbl_df数据(处理速度快)</div><div class="line">iris &lt;- tbl_df(iris)</div><div class="line">##变量筛选select  对应select  删除-</div><div class="line">select(iris,Sepal.Length,Sepal.Width)</div><div class="line">select(iris,-Species)</div><div class="line">##对数据运算并添加为新列mutate() 对应 count(a) as t1</div><div class="line">mutate(iris,t1=Sepal.Length*2)</div><div class="line">##计算</div><div class="line">n(): 计算个数</div><div class="line">n_distinct() #: 计算 x 中唯一值的个数</div><div class="line">first(x), last(x) 和 nth(x, n)#: 返回对应秩的值, 类似于自带函数 x[1], x[length(x)], 和 x[n]</div><div class="line">##过滤filter  对应 where</div><div class="line">filter(iris,Sepal.Length&gt;5,Sepal.Width&lt;4)</div><div class="line">filter(iris,Sepal.Length&gt;5 &amp; Sepal.Width&lt;4 &amp; (Species == &quot;setosa&quot; | Species == &quot;versicolor&quot;))</div><div class="line">##数据排序arrange  对应 order by</div><div class="line">arrange(iris,Sepal.Length)</div><div class="line">arrange(iris,desc(Sepal.Length))</div><div class="line">##汇总group_by() 分组-汇总</div><div class="line">group_by(iris, Species)</div><div class="line">group_by(iris,Species,Petal.Width)  %&gt;% summarise(c1=n(),c2=n_distinct(Species))</div><div class="line">##计算summarise()</div><div class="line">summarise(iris,c1=n(),c2=mean(Sepal.Length))</div><div class="line">##多步操作连接符%&gt;%</div><div class="line">filter(iris,Sepal.Length&gt;5,Sepal.Width&lt;4) %&gt;% summarise(c1=n(),c2=mean(Sepal.Length))</div><div class="line">##抽样sample_n sample_frac</div><div class="line">sample_n(iris,20)</div><div class="line">##左连接 ab交集 差集</div><div class="line">left_join(a, b, by=&quot;x1&quot;)</div><div class="line">right_join(a, b, by=&quot;x1&quot;)</div><div class="line">inner_join(a, b, by=&quot;x1&quot;)##保留匹配的数据</div><div class="line">outer_join(a, b, by=&quot;x1&quot;)##保留所有数据</div><div class="line">semi_join(a, b, by=&quot;x1&quot;) # 数据集a中能与数据集b匹配的记录</div><div class="line">anti_join(a, b, by=&quot;x1&quot;) # 数据集a中雨数据集b不匹配的记录</div><div class="line">intersect(x, y): x 和 y 的交集（按行）</div><div class="line">union(x, y): x 和 y 的并集（按行）</div><div class="line">setdiff(x, y): x 和 y 的补集 （在x中不在y中）</div><div class="line">##列合并</div><div class="line">bind_cols(y, z)</div><div class="line">##行合并</div><div class="line">bind_rows(y, z)</div></pre></td></tr></table></figure>
+<h2 id="深入学习"><a href="#深入学习" class="headerlink" title="深入学习"></a>深入学习</h2><ul>
+<li>dplyr 包自带的60页<a href="https://cran.rstudio.com/web/packages/dplyr/dplyr.pdf" target="_blank" rel="external">详细文档</a></li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[肿瘤生物信息分析相关名词记录]]></title>
+      <url>/2017/09/22/%E8%82%BF%E7%98%A4%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<p><img src="/2017/09/22/肿瘤生物信息分析相关名词记录/" alt=""></p>
+<h2 id="Clvic-数据库"><a href="#Clvic-数据库" class="headerlink" title="Clvic 数据库"></a>Clvic 数据库</h2><p>肿瘤突变位点靶向用药数据库,介绍该数据库的相关论文2017年1月27日发表于顶级遗传学杂志Nature Genetics（pmid：28138153).这个项目是一个开放的社区数据库目前仍在不断更新，截至2017年5月9日，共收录，307个基因，359种药物，1073个突变和189种疾病。<br>数据库中的三个重要的概念需要指出:</p>
+<ul>
+<li>一个是证据等级，只有level高的相对来说更加可信，跟有可能进行有效的指导。</li>
+<li>另一个是STAR 的数量，一般来说，越多STAR的更加有可能应用于临床指导。</li>
+<li>还有一个是证据的类型，是临床前研究，还是预测，还是诊断，预后或者倾向性。其他更多的解释大家可以到数据库的Glossary of Terms的链接进行学习。</li>
+<li>在Statistics部分，展示了数据库记录的简单统计<h3 id="热点基因和热点癌种"><a href="#热点基因和热点癌种" class="headerlink" title="热点基因和热点癌种"></a>热点基因和热点癌种</h3></li>
+</ul>
+<p>纪录数目在50以上的是这七个基因，也就是涉及这七个基因的突变有相对更多潜在的解决方案</p>
+<ul>
+<li>ALK</li>
+<li>KRAS</li>
+<li>EGFR</li>
+<li>BRAF</li>
+<li>ERBB2</li>
+<li>PIK3CA</li>
+<li>TP53<br>癌种的分布，非小细胞肺癌和急性髓细胞样白血病，结肠直肠癌，乳腺癌，黑色素瘤位于前五。<h3 id="有多少突变有药可用，热点药品"><a href="#有多少突变有药可用，热点药品" class="headerlink" title="有多少突变有药可用，热点药品"></a>有多少突变有药可用，热点药品</h3></li>
+</ul>
+<p>统计后发现有594条纪录在drug 这一点上是空的也就是意味着,知道这个突变和癌症相关，但是无药可用。<br>热点药品是克唑替尼，西妥昔单抗，格列卫(甲磺酸伊马替尼)，阿法替尼，和曲妥珠单抗:</p>
+<ul>
+<li>No-Drug</li>
+<li>Crizotinib</li>
+<li>Cetuximab</li>
+<li>Vemurafenib</li>
+<li>Afatinib</li>
+<li>Trastuzumab</li>
+<li>other_drug<h3 id="高度的可信的纪录筛选"><a href="#高度的可信的纪录筛选" class="headerlink" title="高度的可信的纪录筛选"></a>高度的可信的纪录筛选</h3></li>
+</ul>
+<p>最后我选取得了LEVEL在B以及以上的而且是有药物的纪录一共是462 条纪录可以发现用于诊断和high level的纪录还是占少数部分，人类对肿瘤的了解，数据的积累还是很有限。包括我们经常提到的中国NSCLC患者相对更多的EGFR L858R T790M 突变这里列出大部分LEVEL A的纪录.<br>Clvic 还提供了简单的API</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[What is the difference between RPKM and RSEM mRNASeq data?]]></title>
+      <url>/2017/09/21/What-is-the-difference-between-RPKM-and-RSEM-mRNASeq-data/</url>
+      <content type="html"><![CDATA[<p><img src="/2017/09/21/What-is-the-difference-between-RPKM-and-RSEM-mRNASeq-data/" alt=""></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[肿瘤研究常见词]]></title>
+      <url>/2017/08/30/%E8%82%BF%E7%98%A4%E7%A0%94%E7%A9%B6%E5%B8%B8%E8%A7%81%E8%AF%8D/</url>
+      <content type="html"><![CDATA[<p>好多刚接触肿瘤研究的小伙伴们傻傻的分不清楚cfDNA和ctDNA，搞不明白什么是SNP和SNV，不知道什么是融合基因和易感基因。不怕不怕，今天小编汇总了一些肿瘤研究领域的常见词汇。有了这篇肿瘤词汇大全，看文献搞科研妥妥的~</p>
+<h3 id="cfDNA-cell-free-DNA"><a href="#cfDNA-cell-free-DNA" class="headerlink" title="cfDNA (cell free DNA)"></a>cfDNA (cell free DNA)</h3><p>cfDNA即血液中游离的自身DNA，这类DNA多是从身体的细胞或者白血球破裂释放出来的，这基本都是无害的，会被自身清理掉。</p>
+<h3 id="ctDNA-circulating-tumor-DNA"><a href="#ctDNA-circulating-tumor-DNA" class="headerlink" title="ctDNA (circulating tumor DNA)"></a>ctDNA (circulating tumor DNA)</h3><p>ctDNA即循环肿瘤DNA，是一种来自肿瘤细胞的游离DNA，存在于血液、滑膜液和脑脊液等体液中。</p>
+<h3 id="CTCs-circulating-tumor-cells"><a href="#CTCs-circulating-tumor-cells" class="headerlink" title="CTCs (circulating tumor cells)"></a>CTCs (circulating tumor cells)</h3><p>CTCs即循环肿瘤细胞，是从原发肿瘤或转移形成的新肿瘤上掉落，并且进入到患者的外周血循环系统中的恶性肿瘤细胞。</p>
+<h3 id="体细胞突变-somatic-mutation"><a href="#体细胞突变-somatic-mutation" class="headerlink" title="体细胞突变 (somatic mutation)"></a>体细胞突变 (somatic mutation)</h3><p>体细胞突变是指除生殖细胞外的体细胞所发生的变异，如发生在器官和组织的变异。这些变异是肿瘤样品所特有的，其并不来源于父母，也不会传递给后代，往往跟肿瘤的发生和发展有着密切关系，是肿瘤研究中的重点，对于揭示肿瘤发生发展机制有着重要作用。</p>
+<h3 id="生殖细胞突变"><a href="#生殖细胞突变" class="headerlink" title="生殖细胞突变"></a>生殖细胞突变</h3><p>生殖细胞突变，是指来源于精子或卵子的细胞的突变，会传递给后代。</p>
+<h3 id="SNP-single-nucleotide-polymorphism"><a href="#SNP-single-nucleotide-polymorphism" class="headerlink" title="SNP (single nucleotide polymorphism)"></a>SNP (single nucleotide polymorphism)</h3><p>SNP即单核苷酸多态性，是指基因组水平上由单个 核苷酸 的变异所引起的 DNA序列多态性 。</p>
+<h3 id="SNV-single-nucleotide-variation"><a href="#SNV-single-nucleotide-variation" class="headerlink" title="SNV (single nucleotide variation)"></a>SNV (single nucleotide variation)</h3><p>SNV是基因组上单个碱基发生改变的位点，在基因组上广泛分布。<br>SNP是指在一个物种中如果该单碱基变异的频率达到一定水平，而SNV是频率未知（比如仅仅在一个个体中发现）。</p>
+<h3 id="InDel-insertion-or-a-deletion"><a href="#InDel-insertion-or-a-deletion" class="headerlink" title="InDel (insertion or a deletion)"></a>InDel (insertion or a deletion)</h3><p>InDel是基因组上小片段（＜50bp）的插入或缺失突变。</p>
+<h3 id="SV"><a href="#SV" class="headerlink" title="SV"></a>SV</h3><p>SV即染色体结构变异，是基因组变异的重要组成，其主要突变类型有：插入、缺失、倒位等。区别于InDel的插入缺失突变形式，SV片段更长，是在染色体层面上的变异。</p>
+<h3 id="CNV-copy-number-variant"><a href="#CNV-copy-number-variant" class="headerlink" title="CNV (copy number variant)"></a>CNV (copy number variant)</h3><p>CNV即拷贝数目变异，也称拷贝数目多态性 (CNP)，是指与参考序列相比，基因组中1 Kb至几Mb的DNA片段的变异，包括插入、缺失、扩增及其相互组合衍生出的复杂染色体结构变异。CNV在很多物种的基因组中均存在，且分布广泛。</p>
+<h3 id="LOH-loss-of-heterozygosity"><a href="#LOH-loss-of-heterozygosity" class="headerlink" title="LOH (loss of heterozygosity)"></a>LOH (loss of heterozygosity)</h3><p>LOH是一个染色体事件，能够引起整个基因及其附近的染色体区域的丢失。如果父本和母本的基因组存在SNPs，那么子代的两个等位基因（一个来源于父本，一个来源于母本）就存在这些SNPs的区域，那么这些区域就是杂合的（heterozygous）。然而，如果包含这样区域的其中一个亲本的基因拷贝丢失，就会导致这个区域只有一个拷贝，因此这个区域就丢失了杂合性，即LOH。简而言之，就是某个来源于父本或母本的基因拷贝如果丢失，那么使得具有SNP的区域无法表现出杂合的状态。</p>
+<h3 id="CCF（cancer-cell-fraction）"><a href="#CCF（cancer-cell-fraction）" class="headerlink" title="CCF（cancer cell fraction）"></a>CCF（cancer cell fraction）</h3><p>CCF即癌细胞比例</p>
+<h3 id="融合基因"><a href="#融合基因" class="headerlink" title="融合基因"></a>融合基因</h3><p>融合基因是指两个基因的全部或一部分序列相互融合为一个新的基因的过程，是染色体易位、中间缺失或染色体倒置所致的结果，通常具有致瘤性，在各种不同的肿瘤中普遍存在。基因融合是肿瘤的普遍特征，可促进肿瘤的发生和发展，并可作为肿瘤的分子诊断和治疗靶标。</p>
+<h3 id="易感基因"><a href="#易感基因" class="headerlink" title="易感基因"></a>易感基因</h3><p>易感基因(Predisposing gene)，在适宜的环境刺激下能够编码遗传性疾病或获得疾病易感性的基因。</p>
+<h3 id="驱动基因"><a href="#驱动基因" class="headerlink" title="驱动基因"></a>驱动基因</h3><p>肿瘤的发生发展是一个复杂的生物学过程，是许多突变基因共同作用的结果。其中有些基因起到主要的作用，主导了肿瘤的发生，有利于肿瘤的生长扩散，称之为驱动基因。驱动基因的检测有利于我们了解肿瘤形成发展的分子机理，为个体化用药治疗提供重要依据。</p>
+<h3 id="SMG-significantly-mutated-genes"><a href="#SMG-significantly-mutated-genes" class="headerlink" title="SMG (significantly mutated genes)"></a>SMG (significantly mutated genes)</h3><p>SMG即高频突变基因，是指突变频率显著高于背景突变频率（Background mutationrate，BMR）的基因，对肿瘤的发生和发展具有重要作用，在分析的过程中会综合考虑体细胞SNP/InDel的突变情况。</p>
+<h3 id="高频突变基因互斥和协同性分析"><a href="#高频突变基因互斥和协同性分析" class="headerlink" title="高频突变基因互斥和协同性分析"></a>高频突变基因互斥和协同性分析</h3><p>肿瘤的发生是多种不同功能基因协同突变作用的结果。虽然基因突变的发生具有很强的随机性，但经过克隆进化后最终发生肿瘤时，保留下来的突变基因组合应具有一定的协同作用。同时，在不同亚克隆的特异突变基因具有一定的互斥作用。通过突变基因互斥和协同性分析，我们可以分辨出协同性的突变基因及互斥性的突变基因。基因的协同互斥性分析能够帮助识别肿瘤亚克隆特异性的突变基因，还可以帮助定义肿瘤亚型，并且能够揭示相似肿瘤产生的重要功能性体细胞突变，为定位驱动基因提供重要参考。</p>
+<h3 id="肿瘤纯度和倍性分析"><a href="#肿瘤纯度和倍性分析" class="headerlink" title="肿瘤纯度和倍性分析"></a>肿瘤纯度和倍性分析</h3><p>肿瘤样本中癌细胞总是混合一定未知比例的正常细胞，我们称肿瘤样本中癌细胞所占的比例为肿瘤纯度（Tumor purity），称由染色体结构和数目异常导致的肿瘤样本中癌细胞的真正含量为倍性（Tumor ploidy）。估计肿瘤的纯度和倍性有利于癌症基因组进化和肿瘤内的异质性研究。</p>
+<h3 id="肿瘤异质性-克隆结构分析"><a href="#肿瘤异质性-克隆结构分析" class="headerlink" title="肿瘤异质性/克隆结构分析"></a>肿瘤异质性/克隆结构分析</h3><p>肿瘤异质性/克隆结构分析：肿瘤的异质性是指肿瘤组织内部不同的肿瘤细胞或者亚群中体细胞突变不完全相同，而克隆结构分析有利于揭示肿瘤组织的异质性。肿瘤异质性和克隆结构与肿瘤的发展、进化、侵袭转移、复发预后以及药物反应等密切相关。因此从高通量测序数据中破译肿瘤组织细胞中存在的有作用的驱动突变有利于未来的肿瘤药物研发和精准治疗。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 癌症 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 癌症 </tag>
+            
+            <tag> 肿瘤 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[卡方检验与Fisher精确检验]]></title>
+      <url>/2017/08/29/%E5%8D%A1%E6%96%B9%E6%A3%80%E9%AA%8C%E4%B8%8EFisher%E7%B2%BE%E7%A1%AE%E6%A3%80%E9%AA%8C/</url>
+      <content type="html"><![CDATA[<p><img src="/2017/08/29/卡方检验与Fisher精确检验/" alt=""><br>卡方检验和Fisher精确检验是常用的统计学方法，主要用于对分类资料进行比较分析。</p>
+<h2 id="卡方检验"><a href="#卡方检验" class="headerlink" title="卡方检验"></a>卡方检验</h2><p>卡方检验是一种用途很广的计数资料的假设检验方法。它属于非参数检验的范畴，主要是比较两个及两个以上样本率( 构成比）以及两个分类变量的关联性分析。其根本思想就是在于比较理论频数和实际频数的吻合程度或拟合优度问题。它在分类资料统计推断中的应用，包括：两个率或两个构成比比较的卡方检验；多个率或多个构成比比较的卡方检验以及分类资料的相关分析等。但是在一些使用场景中存在着一些滥用卡方检验的现象</p>
+<h3 id="处理四格表数据时不考虑样本量和最小理论频数而直接采用卡方检验"><a href="#处理四格表数据时不考虑样本量和最小理论频数而直接采用卡方检验" class="headerlink" title="处理四格表数据时不考虑样本量和最小理论频数而直接采用卡方检验"></a>处理四格表数据时不考虑样本量和最小理论频数而直接采用卡方检验</h3><p>处理四格表数据是卡方检验最为常见的用途之一，其目的在于分析“构成比”或者“率”上的差异是否具有统计学意义。<strong>对于四格表数据，使用卡方检验的条件为样本量大于40，且最小理论频数应大于5。对于某些小样本的、或者指标阳性率较低的研究，总样本量可能小于40，最小理论频数也可能小于5，此时应该采用Fisher确切概率法进行分析。</strong></p>
+<h3 id="不考虑分析目的、设计类型而盲目套用卡方检验"><a href="#不考虑分析目的、设计类型而盲目套用卡方检验" class="headerlink" title="不考虑分析目的、设计类型而盲目套用卡方检验"></a>不考虑分析目的、设计类型而盲目套用卡方检验</h3>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[linux下使用wget下载数据]]></title>
       <url>/2017/08/24/linux%E4%B8%8B%E4%BD%BF%E7%94%A8wget%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE/</url>
       <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-12/15536111.jpg" alt=""></p>
