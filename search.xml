@@ -68,7 +68,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[肿瘤生物信息分析相关名词记录]]></title>
+      <title><![CDATA[肿瘤生物信息分析相关数据库]]></title>
       <url>/2017/09/22/%E8%82%BF%E7%98%A4%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%AE%B0%E5%BD%95/</url>
       <content type="html"><![CDATA[<p><img src="/2017/09/22/肿瘤生物信息分析相关名词记录/" alt=""></p>
 <h2 id="Clvic-数据库"><a href="#Clvic-数据库" class="headerlink" title="Clvic 数据库"></a>Clvic 数据库</h2><p>肿瘤突变位点靶向用药数据库,介绍该数据库的相关论文2017年1月27日发表于顶级遗传学杂志Nature Genetics（pmid：28138153).这个项目是一个开放的社区数据库目前仍在不断更新，截至2017年5月9日，共收录，307个基因，359种药物，1073个突变和189种疾病。<br>数据库中的三个重要的概念需要指出:</p>
@@ -116,8 +116,7 @@
     <entry>
       <title><![CDATA[肿瘤研究常见词]]></title>
       <url>/2017/08/30/%E8%82%BF%E7%98%A4%E7%A0%94%E7%A9%B6%E5%B8%B8%E8%A7%81%E8%AF%8D/</url>
-      <content type="html"><![CDATA[<p>好多刚接触肿瘤研究的小伙伴们傻傻的分不清楚cfDNA和ctDNA，搞不明白什么是SNP和SNV，不知道什么是融合基因和易感基因。不怕不怕，今天小编汇总了一些肿瘤研究领域的常见词汇。有了这篇肿瘤词汇大全，看文献搞科研妥妥的~</p>
-<h3 id="cfDNA-cell-free-DNA"><a href="#cfDNA-cell-free-DNA" class="headerlink" title="cfDNA (cell free DNA)"></a>cfDNA (cell free DNA)</h3><p>cfDNA即血液中游离的自身DNA，这类DNA多是从身体的细胞或者白血球破裂释放出来的，这基本都是无害的，会被自身清理掉。</p>
+      <content type="html"><![CDATA[<h3 id="cfDNA-cell-free-DNA"><a href="#cfDNA-cell-free-DNA" class="headerlink" title="cfDNA (cell free DNA)"></a>cfDNA (cell free DNA)</h3><p>cfDNA即血液中游离的自身DNA，这类DNA多是从身体的细胞或者白血球破裂释放出来的，这基本都是无害的，会被自身清理掉。</p>
 <h3 id="ctDNA-circulating-tumor-DNA"><a href="#ctDNA-circulating-tumor-DNA" class="headerlink" title="ctDNA (circulating tumor DNA)"></a>ctDNA (circulating tumor DNA)</h3><p>ctDNA即循环肿瘤DNA，是一种来自肿瘤细胞的游离DNA，存在于血液、滑膜液和脑脊液等体液中。</p>
 <h3 id="CTCs-circulating-tumor-cells"><a href="#CTCs-circulating-tumor-cells" class="headerlink" title="CTCs (circulating tumor cells)"></a>CTCs (circulating tumor cells)</h3><p>CTCs即循环肿瘤细胞，是从原发肿瘤或转移形成的新肿瘤上掉落，并且进入到患者的外周血循环系统中的恶性肿瘤细胞。</p>
 <h3 id="体细胞突变-somatic-mutation"><a href="#体细胞突变-somatic-mutation" class="headerlink" title="体细胞突变 (somatic mutation)"></a>体细胞突变 (somatic mutation)</h3><p>体细胞突变是指除生殖细胞外的体细胞所发生的变异，如发生在器官和组织的变异。这些变异是肿瘤样品所特有的，其并不来源于父母，也不会传递给后代，往往跟肿瘤的发生和发展有着密切关系，是肿瘤研究中的重点，对于揭示肿瘤发生发展机制有着重要作用。</p>
@@ -129,6 +128,7 @@
 <h3 id="CNV-copy-number-variant"><a href="#CNV-copy-number-variant" class="headerlink" title="CNV (copy number variant)"></a>CNV (copy number variant)</h3><p>CNV即拷贝数目变异，也称拷贝数目多态性 (CNP)，是指与参考序列相比，基因组中1 Kb至几Mb的DNA片段的变异，包括插入、缺失、扩增及其相互组合衍生出的复杂染色体结构变异。CNV在很多物种的基因组中均存在，且分布广泛。</p>
 <h3 id="LOH-loss-of-heterozygosity"><a href="#LOH-loss-of-heterozygosity" class="headerlink" title="LOH (loss of heterozygosity)"></a>LOH (loss of heterozygosity)</h3><p>LOH是一个染色体事件，能够引起整个基因及其附近的染色体区域的丢失。如果父本和母本的基因组存在SNPs，那么子代的两个等位基因（一个来源于父本，一个来源于母本）就存在这些SNPs的区域，那么这些区域就是杂合的（heterozygous）。然而，如果包含这样区域的其中一个亲本的基因拷贝丢失，就会导致这个区域只有一个拷贝，因此这个区域就丢失了杂合性，即LOH。简而言之，就是某个来源于父本或母本的基因拷贝如果丢失，那么使得具有SNP的区域无法表现出杂合的状态。</p>
 <h3 id="CCF（cancer-cell-fraction）"><a href="#CCF（cancer-cell-fraction）" class="headerlink" title="CCF（cancer cell fraction）"></a>CCF（cancer cell fraction）</h3><p>CCF即癌细胞比例</p>
+<h3 id="SCNAs（somatic-copy-number-alterations）"><a href="#SCNAs（somatic-copy-number-alterations）" class="headerlink" title="SCNAs（somatic copy-number alterations）"></a>SCNAs（somatic copy-number alterations）</h3><p>体细胞拷贝数改变</p>
 <h3 id="融合基因"><a href="#融合基因" class="headerlink" title="融合基因"></a>融合基因</h3><p>融合基因是指两个基因的全部或一部分序列相互融合为一个新的基因的过程，是染色体易位、中间缺失或染色体倒置所致的结果，通常具有致瘤性，在各种不同的肿瘤中普遍存在。基因融合是肿瘤的普遍特征，可促进肿瘤的发生和发展，并可作为肿瘤的分子诊断和治疗靶标。</p>
 <h3 id="易感基因"><a href="#易感基因" class="headerlink" title="易感基因"></a>易感基因</h3><p>易感基因(Predisposing gene)，在适宜的环境刺激下能够编码遗传性疾病或获得疾病易感性的基因。</p>
 <h3 id="驱动基因"><a href="#驱动基因" class="headerlink" title="驱动基因"></a>驱动基因</h3><p>肿瘤的发生发展是一个复杂的生物学过程，是许多突变基因共同作用的结果。其中有些基因起到主要的作用，主导了肿瘤的发生，有利于肿瘤的生长扩散，称之为驱动基因。驱动基因的检测有利于我们了解肿瘤形成发展的分子机理，为个体化用药治疗提供重要依据。</p>
