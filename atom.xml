@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangkai.site/"/>
-  <updated>2017-11-16T01:12:22.000Z</updated>
+  <updated>2017-11-16T02:03:01.000Z</updated>
   <id>http://yangkai.site/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://yangkai.site/2017/11/16/%E4%B8%AD%E5%9B%BDBioconductor%E9%95%9C%E5%83%8F/"/>
     <id>http://yangkai.site/2017/11/16/中国Bioconductor镜像/</id>
     <published>2017-11-16T01:09:44.000Z</published>
-    <updated>2017-11-16T01:12:22.000Z</updated>
+    <updated>2017-11-16T02:03:01.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="中国科技大学"><a href="#中国科技大学" class="headerlink" title="中国科技大学"></a>中国科技大学</h2><p>感谢中科大在2013年3月1日建立了中国第一个Bioconductor镜像。 现在提供测试，很快会在官网里出现。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</div><div class="line">options(BioC_mirror=&quot;http://mirrors.ustc.edu.cn/bioc/&quot;)</div><div class="line">biocLite(&quot;RGalaxy&quot;)</div></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</div><div class="line">chooseBioCmirror()#选择镜像</div><div class="line">	HTTPS BioC mirror</div><div class="line">	1: 0-Bioconductor (World-wide) [https]</div><div class="line">	2: Germany (Dortmund) [https]</div><div class="line">	3: United Kingdom (Hinxton) [https]</div><div class="line">	4: Japan (Tachikawa) [https]</div><div class="line">	5: Japan (Wako) [https]</div><div class="line">	6: China (Anhui) [https]</div><div class="line">	7: Australia (Sydney) [https]</div><div class="line">	8: (HTTP mirrors)</div><div class="line">Selection: 6</div><div class="line">biocLite(&quot;RGalaxy&quot;)</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
