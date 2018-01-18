@@ -103,18 +103,18 @@
 
 
 
-<meta name="description" content="SRA数据库SRA（Sequence ReadArchive）数据库是用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent，Helicos 和 CompleteGenomics。除了原始序列数据外，SRA现在也存在raw reads在参考基因的比对信息。 SRA tools下载https://ftp-trace.ncbi.nlm.nih.gov/sra/s">
+<meta name="description" content="SRA数据库SRA（Sequence ReadArchive）数据库是用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent，Helicos 和 CompleteGenomics。除了原始序列数据外，SRA现在也存在raw reads在参考基因的比对信息。 SRA tools下载wget https://ftp-trace.ncbi.nlm.nih.gov/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NCBI SRA数据下载及使用">
 <meta property="og:url" content="http://yangkai.site/2018/01/18/NCBI-SRA数据下载及使用/index.html">
 <meta property="og:site_name" content="YangKai&#39;s Blog">
-<meta property="og:description" content="SRA数据库SRA（Sequence ReadArchive）数据库是用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent，Helicos 和 CompleteGenomics。除了原始序列数据外，SRA现在也存在raw reads在参考基因的比对信息。 SRA tools下载https://ftp-trace.ncbi.nlm.nih.gov/sra/s">
+<meta property="og:description" content="SRA数据库SRA（Sequence ReadArchive）数据库是用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent，Helicos 和 CompleteGenomics。除了原始序列数据外，SRA现在也存在raw reads在参考基因的比对信息。 SRA tools下载wget https://ftp-trace.ncbi.nlm.nih.gov/">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yangkai.site/2018/01/18/NCBI-SRA数据下载及使用/">
-<meta property="og:updated_time" content="2018-01-18T01:39:51.844Z">
+<meta property="og:updated_time" content="2018-01-18T01:42:52.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NCBI SRA数据下载及使用">
-<meta name="twitter:description" content="SRA数据库SRA（Sequence ReadArchive）数据库是用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent，Helicos 和 CompleteGenomics。除了原始序列数据外，SRA现在也存在raw reads在参考基因的比对信息。 SRA tools下载https://ftp-trace.ncbi.nlm.nih.gov/sra/s">
+<meta name="twitter:description" content="SRA数据库SRA（Sequence ReadArchive）数据库是用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent，Helicos 和 CompleteGenomics。除了原始序列数据外，SRA现在也存在raw reads在参考基因的比对信息。 SRA tools下载wget https://ftp-trace.ncbi.nlm.nih.gov/">
 <meta name="twitter:image" content="http://yangkai.site/2018/01/18/NCBI-SRA数据下载及使用/">
 
 
@@ -401,7 +401,8 @@
       
         <p><img src="/2018/01/18/NCBI-SRA数据下载及使用/" alt=""></p>
 <h2 id="SRA数据库"><a href="#SRA数据库" class="headerlink" title="SRA数据库"></a>SRA数据库</h2><p>SRA（Sequence ReadArchive）数据库是用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent，Helicos 和 CompleteGenomics。除了原始序列数据外，SRA现在也存在raw reads在参考基因的比对信息。</p>
-<h2 id="SRA-tools下载"><a href="#SRA-tools下载" class="headerlink" title="SRA tools下载"></a>SRA tools下载</h2><figure class="highlight plain"><figcaption><span>https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">## 数据批量下载</div><div class="line">```sratoolkit.2.8.2-1-centos_linux64/bin/prefetch-t ascp --option-file /share/Data01/yangkai/temp/no_download.sra.list</div></pre></td></tr></table></figure>
+<h2 id="SRA-tools下载"><a href="#SRA-tools下载" class="headerlink" title="SRA tools下载"></a>SRA tools下载</h2><p><code>wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz</code></p>
+<h2 id="数据批量下载"><a href="#数据批量下载" class="headerlink" title="数据批量下载"></a>数据批量下载</h2><p><code>sratoolkit.2.8.2-1-centos_linux64/bin/prefetch-t ascp --option-file /share/Data01/yangkai/temp/no_download.sra.list</code></p>
 
       
     </div>
@@ -620,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SRA数据库"><span class="nav-number">1.</span> <span class="nav-text">SRA数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SRA-tools下载"><span class="nav-number">2.</span> <span class="nav-text">SRA tools下载</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SRA数据库"><span class="nav-number">1.</span> <span class="nav-text">SRA数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SRA-tools下载"><span class="nav-number">2.</span> <span class="nav-text">SRA tools下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据批量下载"><span class="nav-number">3.</span> <span class="nav-text">数据批量下载</span></a></li></ol></div>
             
 
           </div>
