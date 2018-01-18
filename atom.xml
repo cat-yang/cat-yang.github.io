@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangkai.site/"/>
-  <updated>2018-01-18T01:45:47.754Z</updated>
+  <updated>2018-01-18T01:47:38.059Z</updated>
   <id>http://yangkai.site/</id>
   
   <author>
@@ -20,12 +20,11 @@
     <link href="http://yangkai.site/2018/01/18/NCBI-SRA%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
     <id>http://yangkai.site/2018/01/18/NCBI-SRA数据下载及使用/</id>
     <published>2018-01-18T01:15:17.000Z</published>
-    <updated>2018-01-18T01:45:47.754Z</updated>
+    <updated>2018-01-18T01:47:38.059Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/2018/01/18/NCBI-SRA数据下载及使用/" alt=""></p>
 <h2 id="SRA数据库"><a href="#SRA数据库" class="headerlink" title="SRA数据库"></a>SRA数据库</h2><p>SRA（Sequence ReadArchive）数据库是用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent，Helicos 和 CompleteGenomics。除了原始序列数据外，SRA现在也存在raw reads在参考基因的比对信息。</p>
-<h2 id="SRA-tools下载"><a href="#SRA-tools下载" class="headerlink" title="SRA tools下载"></a>SRA tools下载</h2><p><code>wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz</code></p>
-<h2 id="数据批量下载"><a href="#数据批量下载" class="headerlink" title="数据批量下载"></a>数据批量下载</h2><p><code>sratoolkit.2.8.2-1-centos_linux64/bin/prefetch --option-file /share/Data01/yangkai/temp/no_download.sra.list</code></p>
+<h2 id="SRA-tools下载"><a href="#SRA-tools下载" class="headerlink" title="SRA tools下载"></a>SRA tools下载</h2><figure class="highlight plain"><figcaption><span>https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 数据批量下载</div><div class="line">```sratoolkit.2.8.2-1-centos_linux64/bin/prefetch --option-file /share/Data01/yangkai/temp/no_download.sra.list</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
