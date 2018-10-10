@@ -3,6 +3,54 @@
   
     
     <entry>
+      <title><![CDATA[测试语雀blog]]></title>
+      <url>/2018/10/10/yuque/fx5pyt/</url>
+      <content type="html"><![CDATA[<p>tags:测试<br><span data-type="color" style="color:rgb(37, 37, 37)">categories:测试</span></p>
+<hr>
+<h2 id="测试二级标题"><a href="#测试二级标题" class="headerlink" title="测试二级标题"></a><a name="sxbvgd"></a>测试二级标题</h2><h3 id="测试三级标题"><a href="#测试三级标题" class="headerlink" title="测试三级标题"></a><a name="31gfcf"></a>测试三级标题</h3><h4 id="测试四级标题"><a href="#测试四级标题" class="headerlink" title="测试四级标题"></a><a name="duy9sc"></a>测试四级标题</h4><h3 id="截图测试"><a href="#截图测试" class="headerlink" title="截图测试"></a><a name="vnp0lo"></a>截图测试</h3><p><img src="https://cdn.nlark.com/yuque/0/2018/png/126129/1539138627745-6211b8d2-f795-4c77-8cc1-18384b8e5b8d.png" alt="image.png | center | 686x392"></p>
+<h3 id="测试数学公式"><a href="#测试数学公式" class="headerlink" title="测试数学公式"></a><a name="zq9exm"></a>测试数学公式</h3><div id="g468ir" data-type="math" data-display="inline" data-align="left" data-src="https://cdn.nlark.com/__latex/fa250c18108ec3a62f8ba6faa6dfe184.svg" data-text="2%20%3D%201%20%2B%201" data-width="67" data-height="24"><img src="https://cdn.nlark.com/__latex/fa250c18108ec3a62f8ba6faa6dfe184.svg" width="67"></div><br>### <a name="q8gqab"></a>测试思维导图<br><div id="8gg4dz" data-type="mind-map" data-display="block" data-align="left" data-src="https://cdn.nlark.com/yuque/0/2018/png/126129/1539138739939-db466a9f-63a2-48d3-ad1c-5004ebfa59a6.png" data-width="516" data-height="420" data-text="%7B%22roots%22%3A%5B%7B%22label%22%3A%22%E6%B5%8B%E8%AF%95%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%22%2C%22children%22%3A%5B%7B%22label%22%3A%221%22%2C%22side%22%3A%22right%22%2C%22id%22%3A%22f235e88f%22%7D%2C%7B%22label%22%3A%222%22%2C%22side%22%3A%22right%22%2C%22id%22%3A%225aae450b%22%7D%2C%7B%22label%22%3A%223%22%2C%22side%22%3A%22right%22%2C%22id%22%3A%22917c6a11%22%7D%5D%2C%22id%22%3A%22e505b5f7%22%7D%5D%7D"><img src="https://cdn.nlark.com/yuque/0/2018/png/126129/1539138739939-db466a9f-63a2-48d3-ad1c-5004ebfa59a6.png" width="516"></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">print(&apos;Hello World!&apos;)</div></pre></td></tr></table></figure><br><br>1. 1111<br>2. 2222<br>3. 3333<br>4. 4444<br>5. 5555<br>6. 6666<br><br><div id="bfniqs" data-type="puml" data-display="block" data-align="left" data-src="https://cdn.nlark.com/__puml/2aa76dcc256f08335083bd039b5b4e49.svg" data-width="215" data-height="464" data-text="%40startuml%0A%0A%7CA%20Section%7C%0Astart%0A%3Astep1%3B%0A%7C%23AntiqueWhite%7CB%20Section%7C%0A%3Astep2%3B%0A%3Astep3%3B%0A%7CA%20Section%7C%0A%3Astep4%3B%0A%7CB%20Section%7C%0A%3Astep5%3B%0Astop%0A%0A%40enduml"><img src="https://cdn.nlark.com/__puml/2aa76dcc256f08335083bd039b5b4e49.svg" width="215"><div style="display:none"><br><br></div></div>
+
+
+
+
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Anaconda多环境多版本python配置指导]]></title>
+      <url>/2018/02/02/Anaconda%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%A4%9A%E7%89%88%E6%9C%ACpython%E9%85%8D%E7%BD%AE%E6%8C%87%E5%AF%BC/</url>
+      <content type="html"><![CDATA[<p><img src="/2018/02/02/Anaconda多环境多版本python配置指导/" alt=""></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[放射影像基因组在精准医学中的应用]]></title>
+      <url>/2018/01/24/%E6%94%BE%E5%B0%84%E5%BD%B1%E5%83%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%9C%A8%E7%B2%BE%E5%87%86%E5%8C%BB%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>放射影像基因组是一个新的研究领域，主要是指从医学放射影像数据中分析图像的定性或定量特征，并分析这些图像特征与基因组数据之间的相关性。通过提取有相关性的图像特征，对基因组数据进一步描述。目前该领域的分析主要集中癌症分析中。常见的图像逐句来源：</p>
+<ul>
+<li>CT，X光会断层穿过人体，通过电脑计算后处理为二次成像。</li>
+<li>PET，利用正电子发射体标记的葡萄糖、血流显像剂等药物为示踪剂，以解剖图像方式，从分子水平显示机体及病灶组织细胞的代谢、功能、血流、细胞增殖和受体分布状况。</li>
+<li>MRI，共振成像是利用收集磁共振现象所产生的信号而重建图像的成像技术，简单说就相当于用手摇一摇，让氢质子振动起来，再平静下来，感受一下里面的振动。</li>
+</ul>
+<h2 id="图像数据处理步骤"><a href="#图像数据处理步骤" class="headerlink" title="图像数据处理步骤"></a>图像数据处理步骤</h2><h3 id="图像收集"><a href="#图像收集" class="headerlink" title="图像收集"></a>图像收集</h3><p>影像基因组学算法的第一步是图像采集。然而，在常规临床实践中，由于辐射剂量，扫描方案，重建算法和切片厚度等图像采集参数差异很大。因此，从不同的图像采集方法中提取的特征的比较变得更具挑战性。<br><img src="http://ouemmffgy.bkt.clouddn.com/18-1-24/27581872.jpg" alt=""><br>放射性成像数据的处理，包括图像获取，感兴趣区域（ROI,）分割和多特征提取的连续步骤。</p>
+<h3 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h3><p>获取肿瘤组织的边缘，去评估肿瘤体积的大小。然而，有些情况下，由于肿瘤组织边缘模糊，很难提取到准确的肿瘤组织的边缘。造成边缘模糊的原因可能是肿瘤组织出血或者发炎。</p>
+<h3 id="特征提取"><a href="#特征提取" class="headerlink" title="特征提取"></a>特征提取</h3><p>从确定的肿瘤区域提取图像定量特征以及传统的定性（语义）特征。目前可用于定量的影像特征主要分为以下四大类：</p>
+<ul>
+<li>形态学，形态特征是最基本的，提供关于肿瘤形状和物理特征的信息。</li>
+<li>统计学，使用统计学方法计算的统计特征可以进一步分类为一阶统计（直方图）特征和高阶统计（纹理）特征。这些特征描述了肿瘤内体素值的分布或空间排列。</li>
+<li>区域性加和，区域性特征可以量化超出邻近区域，代表肿瘤克隆异质性。</li>
+<li>基于模型的构建，使用数学方法提取，如分形模型。<br>总体而言，每个类别的特征信息反映了肿瘤特定方面量化参数。</li>
+</ul>
+<h3 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h3>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Linux下安装Matlab2015b]]></title>
       <url>/2018/01/23/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Matlab2015b/</url>
       <content type="html"><![CDATA[<h2 id="安装包下载"><a href="#安装包下载" class="headerlink" title="安装包下载"></a>安装包下载</h2><p>Matlab R2015b_glnxa64.iso and Crack files in BaiduPan:<br>    [<a href="https://pan.baidu.com/s/1gf9IeCN" target="_blank" rel="external">https://pan.baidu.com/s/1gf9IeCN</a>], password: 4gj3</p>

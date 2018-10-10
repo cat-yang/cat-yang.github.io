@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangkai.site/"/>
-  <updated>2018-01-23T02:07:47.859Z</updated>
+  <updated>2018-10-10T02:38:48.521Z</updated>
   <id>http://yangkai.site/</id>
   
   <author>
@@ -14,6 +14,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试语雀blog</title>
+    <link href="http://yangkai.site/2018/10/10/yuque/fx5pyt/"/>
+    <id>http://yangkai.site/2018/10/10/yuque/fx5pyt/</id>
+    <published>2018-10-10T02:25:20.000Z</published>
+    <updated>2018-10-10T02:38:48.521Z</updated>
+    
+    <content type="html"><![CDATA[<p>tags:测试<br><span data-type="color" style="color:rgb(37, 37, 37)">categories:测试</span></p>
+<hr>
+<h2 id="测试二级标题"><a href="#测试二级标题" class="headerlink" title="测试二级标题"></a><a name="sxbvgd"></a>测试二级标题</h2><h3 id="测试三级标题"><a href="#测试三级标题" class="headerlink" title="测试三级标题"></a><a name="31gfcf"></a>测试三级标题</h3><h4 id="测试四级标题"><a href="#测试四级标题" class="headerlink" title="测试四级标题"></a><a name="duy9sc"></a>测试四级标题</h4><h3 id="截图测试"><a href="#截图测试" class="headerlink" title="截图测试"></a><a name="vnp0lo"></a>截图测试</h3><p><img src="https://cdn.nlark.com/yuque/0/2018/png/126129/1539138627745-6211b8d2-f795-4c77-8cc1-18384b8e5b8d.png" alt="image.png | center | 686x392"></p>
+<h3 id="测试数学公式"><a href="#测试数学公式" class="headerlink" title="测试数学公式"></a><a name="zq9exm"></a>测试数学公式</h3><div id="g468ir" data-type="math" data-display="inline" data-align="left" data-src="https://cdn.nlark.com/__latex/fa250c18108ec3a62f8ba6faa6dfe184.svg" data-text="2%20%3D%201%20%2B%201" data-width="67" data-height="24"><img src="https://cdn.nlark.com/__latex/fa250c18108ec3a62f8ba6faa6dfe184.svg" width="67"></div><br>### <a name="q8gqab"></a>测试思维导图<br><div id="8gg4dz" data-type="mind-map" data-display="block" data-align="left" data-src="https://cdn.nlark.com/yuque/0/2018/png/126129/1539138739939-db466a9f-63a2-48d3-ad1c-5004ebfa59a6.png" data-width="516" data-height="420" data-text="%7B%22roots%22%3A%5B%7B%22label%22%3A%22%E6%B5%8B%E8%AF%95%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%22%2C%22children%22%3A%5B%7B%22label%22%3A%221%22%2C%22side%22%3A%22right%22%2C%22id%22%3A%22f235e88f%22%7D%2C%7B%22label%22%3A%222%22%2C%22side%22%3A%22right%22%2C%22id%22%3A%225aae450b%22%7D%2C%7B%22label%22%3A%223%22%2C%22side%22%3A%22right%22%2C%22id%22%3A%22917c6a11%22%7D%5D%2C%22id%22%3A%22e505b5f7%22%7D%5D%7D"><img src="https://cdn.nlark.com/yuque/0/2018/png/126129/1539138739939-db466a9f-63a2-48d3-ad1c-5004ebfa59a6.png" width="516"></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">print(&apos;Hello World!&apos;)</div></pre></td></tr></table></figure><br><br>1. 1111<br>2. 2222<br>3. 3333<br>4. 4444<br>5. 5555<br>6. 6666<br><br><div id="bfniqs" data-type="puml" data-display="block" data-align="left" data-src="https://cdn.nlark.com/__puml/2aa76dcc256f08335083bd039b5b4e49.svg" data-width="215" data-height="464" data-text="%40startuml%0A%0A%7CA%20Section%7C%0Astart%0A%3Astep1%3B%0A%7C%23AntiqueWhite%7CB%20Section%7C%0A%3Astep2%3B%0A%3Astep3%3B%0A%7CA%20Section%7C%0A%3Astep4%3B%0A%7CB%20Section%7C%0A%3Astep5%3B%0Astop%0A%0A%40enduml"><img src="https://cdn.nlark.com/__puml/2aa76dcc256f08335083bd039b5b4e49.svg" width="215"><div style="display:none"><br><br></div></div>
+
+
+
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;tags:测试&lt;br&gt;&lt;span data-type=&quot;color&quot; style=&quot;color:rgb(37, 37, 37)&quot;&gt;categories:测试&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;测试二级标题&quot;&gt;&lt;a href=&quot;#测试二级标题&quot; class=&quot;h
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Anaconda多环境多版本python配置指导</title>
+    <link href="http://yangkai.site/2018/02/02/Anaconda%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%A4%9A%E7%89%88%E6%9C%ACpython%E9%85%8D%E7%BD%AE%E6%8C%87%E5%AF%BC/"/>
+    <id>http://yangkai.site/2018/02/02/Anaconda多环境多版本python配置指导/</id>
+    <published>2018-02-02T06:30:17.000Z</published>
+    <updated>2018-02-02T06:30:17.264Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/02/02/Anaconda多环境多版本python配置指导/" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2018/02/02/Anaconda多环境多版本python配置指导/&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>放射影像基因组在精准医学中的应用</title>
+    <link href="http://yangkai.site/2018/01/24/%E6%94%BE%E5%B0%84%E5%BD%B1%E5%83%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%9C%A8%E7%B2%BE%E5%87%86%E5%8C%BB%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/"/>
+    <id>http://yangkai.site/2018/01/24/放射影像基因组在精准医学中的应用/</id>
+    <published>2018-01-24T01:15:25.000Z</published>
+    <updated>2018-01-25T09:08:44.960Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>放射影像基因组是一个新的研究领域，主要是指从医学放射影像数据中分析图像的定性或定量特征，并分析这些图像特征与基因组数据之间的相关性。通过提取有相关性的图像特征，对基因组数据进一步描述。目前该领域的分析主要集中癌症分析中。常见的图像逐句来源：</p>
+<ul>
+<li>CT，X光会断层穿过人体，通过电脑计算后处理为二次成像。</li>
+<li>PET，利用正电子发射体标记的葡萄糖、血流显像剂等药物为示踪剂，以解剖图像方式，从分子水平显示机体及病灶组织细胞的代谢、功能、血流、细胞增殖和受体分布状况。</li>
+<li>MRI，共振成像是利用收集磁共振现象所产生的信号而重建图像的成像技术，简单说就相当于用手摇一摇，让氢质子振动起来，再平静下来，感受一下里面的振动。</li>
+</ul>
+<h2 id="图像数据处理步骤"><a href="#图像数据处理步骤" class="headerlink" title="图像数据处理步骤"></a>图像数据处理步骤</h2><h3 id="图像收集"><a href="#图像收集" class="headerlink" title="图像收集"></a>图像收集</h3><p>影像基因组学算法的第一步是图像采集。然而，在常规临床实践中，由于辐射剂量，扫描方案，重建算法和切片厚度等图像采集参数差异很大。因此，从不同的图像采集方法中提取的特征的比较变得更具挑战性。<br><img src="http://ouemmffgy.bkt.clouddn.com/18-1-24/27581872.jpg" alt=""><br>放射性成像数据的处理，包括图像获取，感兴趣区域（ROI,）分割和多特征提取的连续步骤。</p>
+<h3 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h3><p>获取肿瘤组织的边缘，去评估肿瘤体积的大小。然而，有些情况下，由于肿瘤组织边缘模糊，很难提取到准确的肿瘤组织的边缘。造成边缘模糊的原因可能是肿瘤组织出血或者发炎。</p>
+<h3 id="特征提取"><a href="#特征提取" class="headerlink" title="特征提取"></a>特征提取</h3><p>从确定的肿瘤区域提取图像定量特征以及传统的定性（语义）特征。目前可用于定量的影像特征主要分为以下四大类：</p>
+<ul>
+<li>形态学，形态特征是最基本的，提供关于肿瘤形状和物理特征的信息。</li>
+<li>统计学，使用统计学方法计算的统计特征可以进一步分类为一阶统计（直方图）特征和高阶统计（纹理）特征。这些特征描述了肿瘤内体素值的分布或空间排列。</li>
+<li>区域性加和，区域性特征可以量化超出邻近区域，代表肿瘤克隆异质性。</li>
+<li>基于模型的构建，使用数学方法提取，如分形模型。<br>总体而言，每个类别的特征信息反映了肿瘤特定方面量化参数。</li>
+</ul>
+<h3 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;放射影像基因组是一个新的研究领域，主要是指从医学放射影像数据中分析图像的定性或定量特征，并分析这些图像特征与基因组数据之间的相关性。通过提取
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Linux下安装Matlab2015b</title>
@@ -614,65 +695,6 @@
     
     
       <category term="图片" scheme="http://yangkai.site/tags/%E5%9B%BE%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux下安装Tensorflow</title>
-    <link href="http://yangkai.site/2017/08/08/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Tensorflow/"/>
-    <id>http://yangkai.site/2017/08/08/Linux下安装Tensorflow/</id>
-    <published>2017-08-08T14:04:35.000Z</published>
-    <updated>2017-08-28T10:15:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://ouemmffgy.bkt.clouddn.com/17-8-28/64231227.jpg" alt=""><br><a id="more"></a></p>
-<h2 id="通过anaconda来安装"><a href="#通过anaconda来安装" class="headerlink" title="通过anaconda来安装"></a>通过anaconda来安装</h2><p> <a href="https://www.continuum.io/why-anaconda" target="_blank" rel="external">Anaconda</a> 是一个集成许多第三方科学计算库的 Python 科学计算环境,Anaconda 使用 conda 作为自己的包管理工具,同时具有自己的<a href="http://conda.pydata.org/docs/using/envs.html" target="_blank" rel="external">计算环境</a>,类似 Virtualenv.<br>在anaconda上安装tensorflow不会对之前安装的 Python 包进行覆盖。不同 Python 工程需要的依赖包,anaconda 将他们存储在不同的地方。</p>
-<ul>
-<li>安装anaconda</li>
-<li>通过conda建立一个tensorflow计算环境</li>
-<li>激活环境，使用conda 安装 TensorFlow</li>
-<li>安装成功后,每次使用 TensorFlow 的时候需要激活 conda 环境<br>###安装 Anaconda :<br>参考 Anaconda 的下载页面的<a href="https://www.continuum.io/downloads" target="_blank" rel="external">指导</a><br>卸载anaconda，可以直接删除安装的目录。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -rf ~/anaconda3</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装Tensorflow"><a href="#安装Tensorflow" class="headerlink" title="安装Tensorflow"></a>安装Tensorflow</h2><p>建立一个 conda 计算环境名字叫tensorflow:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Python 3.6</div><div class="line">$ conda create -n tensorflow python=3.6</div></pre></td></tr></table></figure></p>
-<p>激活tensorflow环境,然后使用其中的 pip 安装 TensorFlow. 当使用easy_install使用–ignore-installed标记防止错误的产生。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#激活tensorflow环境</div><div class="line">$ source activate tensorflow</div><div class="line"># Ubuntu/Linux 64-bit, CPU only, Python 3.6:</div><div class="line">(tensorflow)$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp36-cp36m-linux_x86_64.whl</div><div class="line">#当你不用 TensorFlow 的时候,关闭环境:</div><div class="line">(tensorflow)$ source deactivate</div></pre></td></tr></table></figure></p>
-<p>推荐一个Tensoflow的学习网站 <a href="http://tflearn.org" target="_blank" rel="external">tensorflow learn</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ouemmffgy.bkt.clouddn.com/17-8-28/64231227.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Tensorflow" scheme="http://yangkai.site/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yangkai.site/2017/08/08/hello-world/"/>
-    <id>http://yangkai.site/2017/08/08/hello-world/</id>
-    <published>2017-08-08T11:30:46.000Z</published>
-    <updated>2017-08-09T13:56:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><img src="http://i1.bvimg.com/603952/902a4c06b63187df.jpg" alt="Helloworld"><br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;&lt;img src=&quot;http://i1.bvimg.com/603952/902a4c06b63187df.jpg&quot; alt=&quot;Helloworld&quot;&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
